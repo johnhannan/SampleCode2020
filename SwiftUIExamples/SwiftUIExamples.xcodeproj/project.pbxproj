@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B490F0924F57DEA00F396B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B490F0824F57DEA00F396B9 /* AppDelegate.swift */; };
 		3B490F0B24F57DEA00F396B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B490F0A24F57DEA00F396B9 /* SceneDelegate.swift */; };
-		3B490F0D24F57DEA00F396B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B490F0C24F57DEA00F396B9 /* ContentView.swift */; };
+		3B490F0D24F57DEA00F396B9 /* CheerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B490F0C24F57DEA00F396B9 /* CheerView.swift */; };
 		3B490F0F24F57DEE00F396B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B490F0E24F57DEE00F396B9 /* Assets.xcassets */; };
 		3B490F1224F57DEE00F396B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B490F1124F57DEE00F396B9 /* Preview Assets.xcassets */; };
 		3B490F1524F57DEE00F396B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B490F1324F57DEE00F396B9 /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		3B490F0524F57DEA00F396B9 /* SwiftUIExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B490F0824F57DEA00F396B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B490F0A24F57DEA00F396B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B490F0C24F57DEA00F396B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3B490F0C24F57DEA00F396B9 /* CheerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheerView.swift; sourceTree = "<group>"; };
 		3B490F0E24F57DEE00F396B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B490F1124F57DEE00F396B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B490F1424F57DEE00F396B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				3B490F0824F57DEA00F396B9 /* AppDelegate.swift */,
 				3B490F0A24F57DEA00F396B9 /* SceneDelegate.swift */,
-				3B490F0C24F57DEA00F396B9 /* ContentView.swift */,
+				3B490F0C24F57DEA00F396B9 /* CheerView.swift */,
 				3B490F0E24F57DEE00F396B9 /* Assets.xcassets */,
 				3B490F1324F57DEE00F396B9 /* LaunchScreen.storyboard */,
 				3B490F1624F57DEE00F396B9 /* Info.plist */,
@@ -210,7 +210,7 @@
 			files = (
 				3B490F0924F57DEA00F396B9 /* AppDelegate.swift in Sources */,
 				3B490F0B24F57DEA00F396B9 /* SceneDelegate.swift in Sources */,
-				3B490F0D24F57DEA00F396B9 /* ContentView.swift in Sources */,
+				3B490F0D24F57DEA00F396B9 /* CheerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

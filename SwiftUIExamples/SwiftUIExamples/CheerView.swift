@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CheerView: View {
     var body: some View {
         HStack {
             Image("Mascot0")
@@ -29,6 +29,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CheerView()
     }
 }

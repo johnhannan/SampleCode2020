@@ -9,26 +9,75 @@
 import SwiftUI
 
 struct CheerView: View {
+    let colors  = [Color.red, .green, .blue, .orange, .pink, .purple]
+    
     var body: some View {
-        HStack {
-            Image("Mascot0")
-            VStack {
-                Text("We Are!")
-                Text("Penn State")
+        
+
+        
+//        List {
+//            ForEach(0..<100) {i in
+//                Text("Number \(i)")
+//            }
+//        }
+//        VStack {
+//
+//            HStack {
+//                ForEach(0..<5) {i in
+//                    Text("abc\(i)")
+//                }
+//            }
+//            Button("Cheer") {
+//            }
+//
+        
+        VStack {
+            Spacer()
+            RoundedRectangle(cornerRadius: 50).fill(Color.blue)
+            ZStack(alignment: .bottomTrailing) {
+                Image("Mascot0")
+                    .padding(.leading)
+                    .frame(width: 200.0, height: 400.0)
+                Text("Mastcot").padding()
+                    .background(Color.white)
             }
-            VStack {
-                Group {
-                Text("Thank You")
-                Text("You're Welcome")
+            Spacer()
+                
+                Button("Cheer") {
+                    
                 }
-            }
+            HStack {
+                VStack {
+                    Text("We Are!")
+                    Text("Penn State")
+                }
+                EndingCheer(name: "Pepper")
+                }
+            
         }
+        
     }
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct CheerView_Previews: PreviewProvider {
     static var previews: some View {
         CheerView()
+    }
+}
+
+struct EndingCheer: View {
+    let name : String
+    var body: some View {
+        VStack(alignment: .trailing, spacing: 20)
+        {
+            Text(name)
+            Text("Thank You")
+                .fontWeight(.bold)
+                .foregroundColor(Color.purple)
+                .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
+                .cornerRadius(/*@START_MENU_TOKEN@*/7.0/*@END_MENU_TOKEN@*/)
+            Text("You're Welcome")
+        }.font(.title)
     }
 }

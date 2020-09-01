@@ -16,6 +16,8 @@
 		3B31374524F99B110046F735 /* We_AreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31374424F99B110046F735 /* We_AreTests.swift */; };
 		3B42D91924FE62D300C699FD /* CheeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42D91824FE62D300C699FD /* CheeringView.swift */; };
 		3B42D91B24FE634800C699FD /* LionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42D91A24FE634800C699FD /* LionView.swift */; };
+		3B42D95924FEB9FE00C699FD /* CheerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42D95824FEB9FE00C699FD /* CheerModel.swift */; };
+		3B42D95B24FEBAA700C699FD /* CheerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42D95A24FEBAA700C699FD /* CheerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		3B31374624F99B110046F735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B42D91824FE62D300C699FD /* CheeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheeringView.swift; sourceTree = "<group>"; };
 		3B42D91A24FE634800C699FD /* LionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionView.swift; sourceTree = "<group>"; };
+		3B42D95824FEB9FE00C699FD /* CheerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheerModel.swift; path = Views/CheerModel.swift; sourceTree = "<group>"; };
+		3B42D95A24FEBAA700C699FD /* CheerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 		3B31372C24F99B0F0046F735 /* We Are */ = {
 			isa = PBXGroup;
 			children = (
+				3B42D95824FEB9FE00C699FD /* CheerModel.swift */,
+				3B42D95A24FEBAA700C699FD /* CheerViewModel.swift */,
 				3B42D91C24FE639C00C699FD /* Views */,
 				3B31372D24F99B0F0046F735 /* AppDelegate.swift */,
 				3B31372F24F99B0F0046F735 /* SceneDelegate.swift */,
@@ -223,9 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B31372E24F99B0F0046F735 /* AppDelegate.swift in Sources */,
+				3B42D95924FEB9FE00C699FD /* CheerModel.swift in Sources */,
 				3B42D91B24FE634800C699FD /* LionView.swift in Sources */,
 				3B42D91924FE62D300C699FD /* CheeringView.swift in Sources */,
 				3B31373024F99B0F0046F735 /* SceneDelegate.swift in Sources */,
+				3B42D95B24FEBAA700C699FD /* CheerViewModel.swift in Sources */,
 				3B31373224F99B0F0046F735 /* WeAreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,9 +10,16 @@ import Foundation
 
 
 import UIKit
+import SwiftUI
 
 extension UIColor {
 
     static var randomColor : UIColor {return UIColor(red: CGFloat(arc4random() % 256)/255.0, green: CGFloat(arc4random() % 256)/255.0, blue: CGFloat(arc4random() % 256)/255.0, alpha: 1.0)}
+    
+}
+
+extension Color {
+
+    static var randomColor : Color {return Color(red: Double((Int.random(in: 0...255)))/255.0, green: Double((Int.random(in: 0...255)))/255.0, blue: Double((Int.random(in: 0...255)))/255.0 )}
     
 }

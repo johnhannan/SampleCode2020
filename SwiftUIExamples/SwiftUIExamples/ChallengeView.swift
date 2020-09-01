@@ -13,10 +13,10 @@ struct ChallengeView: View {
     
     var body: some View {
         
-        ImageCaption()
+//        ImageCaption()
 //        RedSquaresView()
 //        NumbersView()
-//        GridView()
+        GridView()
         }
     
 }

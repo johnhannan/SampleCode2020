@@ -16,7 +16,7 @@ struct WeAreView: View {
             Color.orange
             
             VStack {
-                Spacer()
+                Spacer(minLength: topSpacerLength)
                 LionView()
                 CheeringView()
             }
@@ -24,7 +24,7 @@ struct WeAreView: View {
         }.edgesIgnoringSafeArea(.all)
 
     }
-    
+    let topSpacerLength : CGFloat = 40.0
 }
 
 

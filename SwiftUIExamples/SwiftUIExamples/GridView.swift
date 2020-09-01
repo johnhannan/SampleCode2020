@@ -21,7 +21,8 @@ struct GridView : View {
                 HStack {
                     ForEach(0..<self.columns) { c in
                         
-                        Color(UIColor.randomColor)
+                        //Color(UIColor.randomColor)
+                        Color.randomColor
                         .aspectRatio(1.0, contentMode: .fit)
                         .cornerRadius(15)
                     }

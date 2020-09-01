@@ -11,7 +11,7 @@ import SwiftUI
 struct LionView: View {
     var body: some View {
         VStack {
-            Spacer()
+         
             Image("Mascot0")
                 .resizable()
                 .aspectRatio(contentMode: ContentMode.fit)

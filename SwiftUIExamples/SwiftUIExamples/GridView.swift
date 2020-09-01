@@ -22,7 +22,7 @@ struct GridView : View {
                     ForEach(0..<self.columns) { c in
                         
                         Color(UIColor.randomColor)
-                            .aspectRatio(1.0, contentMode: .fit)
+                        .aspectRatio(1.0, contentMode: .fit)
                         .cornerRadius(15)
                     }
                 }

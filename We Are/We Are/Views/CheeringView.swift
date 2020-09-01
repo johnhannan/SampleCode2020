@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CheeringView: View {
     var body: some View {
-        VStack(spacing: 30) {
+        VStack(spacing: 20) {
             
             
             Text("We Are")

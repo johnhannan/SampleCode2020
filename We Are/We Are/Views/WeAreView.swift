@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WeAreView: View {
     var body: some View {
         
         ZStack {
@@ -16,6 +16,7 @@ struct ContentView: View {
             Color.orange
             
             VStack {
+                Spacer()
                 LionView()
                 CheeringView()
             }
@@ -29,9 +30,9 @@ struct ContentView: View {
 
 
 
-struct ContentView_Previews: PreviewProvider {
+struct WeAreView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WeAreView()
     }
 }
 

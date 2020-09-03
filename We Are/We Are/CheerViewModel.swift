@@ -8,7 +8,21 @@
 
 import Foundation
 
-class CheerViewModel {
+class CheerViewModel : ObservableObject{
+    @Published var cheerModel = CheerModel()
     
+
+    // Intents from View
     
+    var firstCheer : String {cheerModel.weAreText}
+    var secondCheer : String {cheerModel.pennStateText}
+    
+    var shouldShowFirstCheer : Bool {cheerModel.gameState == .weare}
+    var shouldShowSecondCheer : Bool {cheerModel.gameState == .pennstate}
+    
+    var mascotImageName : String {cheerModel.mascotImage}
+    
+    func doACheer() {
+        cheerModel.incrementCheerCount()
+    }
 }

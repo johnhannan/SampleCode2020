@@ -9,18 +9,21 @@
 import SwiftUI
 
 struct PlayButtonView: View {
-    @EnvironmentObject var memoryViewModel : MemoryViewModel<Color>
+  
     let buttonTextSize :CGFloat = 40
     
+    //TODO: button should be disabled based on game state
     var body : some View {
-        Button(action: {self.memoryViewModel.playRound()}) {
+        Button(action: { /* add action */ }) {  //TODO: add action to change state of game
             ZStack {
-                Circle().scale(0.53).fill(backgroundColor(for: memoryViewModel.gameState))
+             
+                Circle().scale(0.54).fill(Color.black)
+                Circle().scale(0.52).fill(Color.white)
                 Circle().scale(0.5).fill(Color.black)
-                Text(memoryViewModel.playButtonTitle).font(.system(size: self.buttonTextSize))
+                Text("Play").font(.system(size: self.buttonTextSize))
                     .foregroundColor(.white)
             }
-        }.disabled(memoryViewModel.shouldDisablePlayButton)
+        }
     }
 }
 

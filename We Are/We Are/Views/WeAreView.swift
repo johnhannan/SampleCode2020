@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct WeAreView: View {
+    @ObservedObject var cheerViewModel  = CheerViewModel()
+    
     var body: some View {
         
         ZStack {
@@ -22,6 +24,7 @@ struct WeAreView: View {
             }
             
         }.edgesIgnoringSafeArea(.all)
+        .environmentObject(cheerViewModel)
 
     }
     let topSpacerLength : CGFloat = 40.0

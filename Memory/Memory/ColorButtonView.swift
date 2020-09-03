@@ -9,17 +9,17 @@
 import SwiftUI
 
 struct ColorButtonView: View {
-    @EnvironmentObject var memoryViewModel : MemoryViewModel<Color>
+
      let colors : [Color]
      let index : Int
      
      var body: some View {
-         Button(action: {self.memoryViewModel.nextGuess(index:self.index)}) {
+         Button(action: { /* add action */ }) {  //TODO: add action to make guess
              RoundedRectangle(cornerRadius: 10)
                   .fill(colors[index])
                  .aspectRatio(1.0, contentMode: .fit)
                  .shadow(radius: 20)
-         }.disabled(memoryViewModel.shouldDisableColorButton)
+         }
      }
 }
 

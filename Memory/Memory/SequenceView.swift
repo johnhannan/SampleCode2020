@@ -10,8 +10,9 @@ import SwiftUI
 
 // The sequence of dots that the user is trying to guess[
 struct SequenceView: View {
-    let colorSequence: [Color]
-    let visibility: [Bool]
+    //TODO: need to parameterize the colorSequence with current model state
+    let colorSequence: [Color] = [.red, .blue, .green, .yellow]
+    
     
     let circleWidth :CGFloat = 15.0
 
@@ -21,7 +22,7 @@ struct SequenceView: View {
                 Circle()
                     .fill(self.colorSequence[i])
                     .frame(width: self.circleWidth, height: self.circleWidth, alignment: .center)
-                    .opacity(self.visibility[i] ? 1.0 : 0.0)
+                
                 
             }
         }
@@ -30,6 +31,6 @@ struct SequenceView: View {
 
 struct SequenceView_Previews: PreviewProvider {
     static var previews: some View {
-        SequenceView(colorSequence: [.red, .blue, .green], visibility: [true, true, false])
+        SequenceView()
     }
 }

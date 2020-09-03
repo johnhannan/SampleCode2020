@@ -19,7 +19,7 @@ struct MemoryView: View {
                     .fill(Color.gray)
                     .edgesIgnoringSafeArea(.all)
                 
-                
+                //TODO: these buttons should be disabled depending on game state
                 VStack {
                     HStack {
                         ColorButtonView(colors: Self.colors, index:0)

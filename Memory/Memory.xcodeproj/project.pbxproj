@@ -373,7 +373,7 @@
 		3B42D94D24FE8F7C00C699FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Memory;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Memory/Preview Content\"";
 				DEVELOPMENT_TEAM = 9QQAQWEZF8;
@@ -393,7 +393,7 @@
 		3B42D94E24FE8F7C00C699FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Memory;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Memory/Preview Content\"";
 				DEVELOPMENT_TEAM = 9QQAQWEZF8;

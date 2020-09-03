@@ -9,17 +9,23 @@
 import SwiftUI
 
 struct CheeringView: View {
+    @EnvironmentObject var cheerViewModel : CheerViewModel
+    
     var body: some View {
         VStack(spacing: 20) {
             
             
-            Text("We Are")
+            Text(cheerViewModel.firstCheer)
                 .frame(width: cheerWidth, height: nil, alignment: .center)
-            Text("Penn State")
+                .opacity(cheerViewModel.shouldShowFirstCheer ? 1.0 : 0.0)
+                
+                
+            Text(cheerViewModel.secondCheer)
                 .frame(width: cheerWidth, height: nil, alignment: .center)
-            
-            
-            Button("Cheer")  {  }
+                .opacity(cheerViewModel.shouldShowSecondCheer ? 1.0 : 0.0)
+
+            Button("Cheer")  { self.cheerViewModel.doACheer() }
+                
                 .padding(5)
                 .background(Color.blue)
                 .foregroundColor(.white)
@@ -32,9 +38,9 @@ struct CheeringView: View {
     let cheerWidth : CGFloat = 300
 }
 
-
+ 
 struct CheeringView_Previews: PreviewProvider {
     static var previews: some View {
-        CheeringView()
+        CheeringView().environmentObject(CheerViewModel())
     }
 }

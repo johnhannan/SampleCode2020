@@ -10,25 +10,27 @@ import SwiftUI
 
 struct MemoryView: View {
     
+    //TODO: Need a View Model
+    
     static let colors : [Color]  = [Color.red, .blue, .green, .yellow]
     
   
         var body: some View {
             ZStack(alignment: .center) {
                 Rectangle()
-                    .fill(Color.gray)
+                    .fill(Color.gray)  //TODO: make background color depend on game state
                     .edgesIgnoringSafeArea(.all)
                 
                 //TODO: these buttons should be disabled depending on game state
                 VStack {
                     HStack {
-                        ColorButtonView(colors: Self.colors, index:0)
-                        ColorButtonView(colors: Self.colors, index:1)
+                        GuessButtonView(colors: Self.colors, index:0)
+                        GuessButtonView(colors: Self.colors, index:1)
                         
                     }
                     HStack {
-                        ColorButtonView(colors: Self.colors, index:2)
-                        ColorButtonView(colors: Self.colors, index:3)
+                        GuessButtonView(colors: Self.colors, index:2)
+                        GuessButtonView(colors: Self.colors, index:3)
                         
                     }
                     Spacer(minLength: 50)
@@ -43,8 +45,25 @@ struct MemoryView: View {
         }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MemoryView()
     }
 }
+
+//
+//func backgroundColor(for state: GameState) -> Color   {
+//    switch state {
+//    case .notPlaying:
+//        return ViewConstants.notPlayingBackgroundColor
+//    case .memorizing:
+//        return ViewConstants.memorizingBackgroundColor
+//    case .guessing:
+//        return ViewConstants.guessingBackgroundColor
+//    case .lost:
+//        return ViewConstants.lostBackgroundColor
+//    case .won:
+//        return ViewConstants.wonBackgroundColor
+//    }
+//}

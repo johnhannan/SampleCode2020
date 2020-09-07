@@ -10,7 +10,7 @@ import SwiftUI
 
 // The sequence of dots that the user is trying to guess[
 struct SequenceView: View {
-    //TODO: need to parameterize the colorSequence with current model state
+    //TODO: need to parameterize the colorSequence from current model state
     let colorSequence: [Color] = [.red, .blue, .green, .yellow]
     
     
@@ -22,7 +22,7 @@ struct SequenceView: View {
                 Circle()
                     .fill(self.colorSequence[i])
                     .frame(width: self.circleWidth, height: self.circleWidth, alignment: .center)
-                
+                //TODO:  Need to show the correct number of items
                 
             }
         }

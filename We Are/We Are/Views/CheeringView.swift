@@ -18,12 +18,12 @@ struct CheeringView: View {
             Text(cheerViewModel.firstCheer)
                 .frame(width: cheerWidth, height: nil, alignment: .center)
                 .opacity(cheerViewModel.shouldShowFirstCheer ? 1.0 : 0.0)
-                
-                
+            
+            
             Text(cheerViewModel.secondCheer)
                 .frame(width: cheerWidth, height: nil, alignment: .center)
                 .opacity(cheerViewModel.shouldShowSecondCheer ? 1.0 : 0.0)
-
+            
             Button("Cheer")  { self.cheerViewModel.doACheer() }
                 
                 .padding(5)

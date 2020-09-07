@@ -1,5 +1,5 @@
 //
-//  ColorButtonView.swift
+//  GuessButtonView.swift
 //  Memory
 //
 //  Created by jjh9 on 9/1/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ColorButtonView: View {
+struct GuessButtonView: View {
 
      let colors : [Color]
      let index : Int
@@ -25,6 +25,6 @@ struct ColorButtonView: View {
 
 struct ColorButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorButtonView(colors: [.purple], index: 0)
+        GuessButtonView(colors: [.purple], index: 0)
     }
 }

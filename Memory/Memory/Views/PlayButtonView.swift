@@ -20,7 +20,7 @@ struct PlayButtonView: View {
                 Circle().scale(0.54).fill(Color.black)
                 Circle().scale(0.52).fill(Color.white)
                 Circle().scale(0.5).fill(Color.black)
-                Text("Play").font(.system(size: self.buttonTextSize))
+                Text("Play").font(.system(size: self.buttonTextSize)) //TODO: make title reflect state
                     .foregroundColor(.white)
             }
         }

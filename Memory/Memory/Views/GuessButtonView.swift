@@ -9,18 +9,21 @@
 import SwiftUI
 
 struct GuessButtonView: View {
-
+    @EnvironmentObject var gameModel : GameModel
+    
      let colors : [Color]
      let index : Int
      
      var body: some View {
-         Button(action: { /* add action */ }) {  //TODO: add action to make guess
+        Button(action: { self.gameModel.nextGuess(guess: self.index) }) {  //TODO: add action to make guess
              RoundedRectangle(cornerRadius: 10)
                   .fill(colors[index])
                  .aspectRatio(1.0, contentMode: .fit)
                  .shadow(radius: 20)
-         }
+        }.disabled(shouldDisableGuessButton)
      }
+    
+    var shouldDisableGuessButton : Bool {gameModel.gameState != .guessing }
 }
 
 struct ColorButtonView_Previews: PreviewProvider {

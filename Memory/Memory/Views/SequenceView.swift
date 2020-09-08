@@ -11,8 +11,9 @@ import SwiftUI
 // The sequence of dots that the user is trying to guess[
 struct SequenceView: View {
     //TODO: need to parameterize the colorSequence from current model state
-    let colorSequence: [Color] = [.red, .blue, .green, .yellow]
+    @EnvironmentObject var gameModel : GameModel
     
+    var colorSequence : [Color]
     
     let circleWidth :CGFloat = 15.0
 
@@ -23,14 +24,26 @@ struct SequenceView: View {
                     .fill(self.colorSequence[i])
                     .frame(width: self.circleWidth, height: self.circleWidth, alignment: .center)
                 //TODO:  Need to show the correct number of items
+                    .opacity(i<self.visibilityCount ? 1.0 : 0.0)
                 
             }
         }
     }
-}
-
-struct SequenceView_Previews: PreviewProvider {
-    static var previews: some View {
-        SequenceView()
+    
+    var visibilityCount : Int {
+        switch gameModel.gameState {
+        case .memorizing, .won:
+            return colorSequence.count
+        case .guessing:
+            return gameModel.nextGuessIndex
+        default:
+            return 0
+        }
     }
 }
+
+//struct SequenceView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SequenceView()
+//    }
+//}

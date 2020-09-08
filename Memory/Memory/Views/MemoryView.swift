@@ -14,11 +14,14 @@ struct MemoryView: View {
     
     static let colors : [Color]  = [Color.red, .blue, .green, .yellow]
     
-  
+    @ObservedObject var gameModel = GameModel(with: 4)
+    
+    var colorSequence : [Color]  {gameModel.sequence.map{Self.colors[$0]}}
+    
         var body: some View {
             ZStack(alignment: .center) {
                 Rectangle()
-                    .fill(Color.gray)  //TODO: make background color depend on game state
+                    .fill(Color.background(for: gameModel.gameState))  //TODO: make background color depend on game state
                     .edgesIgnoringSafeArea(.all)
                 
                 //TODO: these buttons should be disabled depending on game state
@@ -34,11 +37,11 @@ struct MemoryView: View {
                         
                     }
                     Spacer(minLength: 50)
-                    SequenceView()
+                    SequenceView(colorSequence: colorSequence)
                     
-                    PlayButtonView()
+                    MainButtonView()
                     
-                }
+                    }.environmentObject(gameModel)
                 .padding()
                 
             }

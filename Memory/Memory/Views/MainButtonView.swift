@@ -1,5 +1,5 @@
 //
-//  PlayButtonView.swift
+//  MainButtonView.swift
 //  Memory
 //
 //  Created by jjh9 on 9/1/20.
@@ -8,13 +8,14 @@
 
 import SwiftUI
 
-struct PlayButtonView: View {
-  
+struct MainButtonView: View {
+    @EnvironmentObject var gameModel : GameModel
+    
     let buttonTextSize :CGFloat = 40
     
     //TODO: button should be disabled based on game state
     var body : some View {
-        Button(action: { /* add action */ }) {  //TODO: add action to change state of game
+        Button(action: { self.gameModel.advanceGameState() }) {  //TODO: add action to change state of game
             ZStack {
              
                 Circle().scale(0.54).fill(Color.black)
@@ -23,12 +24,15 @@ struct PlayButtonView: View {
                 Text("Play").font(.system(size: self.buttonTextSize)) //TODO: make title reflect state
                     .foregroundColor(.white)
             }
-        }
+        }.disabled(shouldDisableMainButton)
     }
+    
+    var shouldDisableMainButton : Bool { gameModel.gameState == .guessing }
+    
 }
 
 struct PlayButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayButtonView()
+        MainButtonView()
     }
 }

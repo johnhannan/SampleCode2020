@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum State {
+enum GameState {
     case ready, weare, pennstate
 }
 
@@ -17,7 +17,7 @@ struct CheerModel {
     private let cheerRounds = 3
     private let thankYouRounds = 1
     
-    var gameState : State {
+    var gameState : GameState {
         if currentCheerCount == 0 {
             return .ready
         } else if currentCheerCount % 2 == 1 {

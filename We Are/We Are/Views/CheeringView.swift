@@ -9,22 +9,23 @@
 import SwiftUI
 
 struct CheeringView: View {
-    @EnvironmentObject var cheerViewModel : CheerViewModel
+
+    @Binding var cheerModel : CheerModel
     
     var body: some View {
         VStack(spacing: 20) {
             
             
-            Text(cheerViewModel.firstCheer)
+            Text(cheerModel.weAreText)
                 .frame(width: cheerWidth, height: nil, alignment: .center)
-                .opacity(cheerViewModel.shouldShowFirstCheer ? 1.0 : 0.0)
+                .opacity(shouldShowFirstCheer ? 1.0 : 0.0)
             
             
-            Text(cheerViewModel.secondCheer)
+            Text(cheerModel.pennStateText)
                 .frame(width: cheerWidth, height: nil, alignment: .center)
-                .opacity(cheerViewModel.shouldShowSecondCheer ? 1.0 : 0.0)
+                .opacity(shouldShowSecondCheer ? 1.0 : 0.0)
             
-            Button("Cheer")  { self.cheerViewModel.doACheer() }
+            Button("Cheer")  { self.cheerModel.incrementCheerCount() }
                 
                 .padding(5)
                 .background(Color.blue)
@@ -36,11 +37,16 @@ struct CheeringView: View {
     }
     
     let cheerWidth : CGFloat = 300
+    
+    var shouldShowFirstCheer : Bool {cheerModel.gameState == .weare}
+    var shouldShowSecondCheer : Bool {cheerModel.gameState == .pennstate}
 }
 
  
 struct CheeringView_Previews: PreviewProvider {
+    @State static var cheerModel = CheerModel()
     static var previews: some View {
-        CheeringView().environmentObject(CheerViewModel())
+        CheeringView(cheerModel: $cheerModel)
+        
     }
 }

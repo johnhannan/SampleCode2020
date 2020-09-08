@@ -8,6 +8,8 @@
 
 import Foundation
 
+/* CheerViewModel unused in this design. View instantiates Model directly.  Good for bindings
+ 
 class CheerViewModel : ObservableObject{
     @Published var cheerModel = CheerModel()
     
@@ -26,3 +28,5 @@ class CheerViewModel : ObservableObject{
         cheerModel.incrementCheerCount()
     }
 }
+ 
+ */

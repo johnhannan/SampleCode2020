@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct WeAreView: View {
-    @ObservedObject var cheerViewModel  = CheerViewModel()
+    //@ObservedObject var cheerViewModel  = CheerViewModel()
+    @State var cheerModel = CheerModel()
+    
     
     var body: some View {
         
@@ -19,12 +21,12 @@ struct WeAreView: View {
             
             VStack {
                 Spacer(minLength: topSpacerLength)
-                LionView()
-                CheeringView()
+                LionView(imageName: cheerModel.mascotImage)
+                CheeringView(cheerModel: $cheerModel)
             }
             
         }.edgesIgnoringSafeArea(.all)
-        .environmentObject(cheerViewModel)
+      
 
     }
     let topSpacerLength : CGFloat = 40.0
@@ -35,7 +37,7 @@ struct WeAreView: View {
 
 struct WeAreView_Previews: PreviewProvider {
     static var previews: some View {
-        WeAreView()
+        WeAreView(cheerModel: CheerModel())
     }
 }
 

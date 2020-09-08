@@ -9,12 +9,11 @@
 import SwiftUI
 
 struct LionView: View {
-    @EnvironmentObject  var cheerViewModel : CheerViewModel
-    
+    var imageName : String
     var body: some View {
         VStack {
          
-            Image(cheerViewModel.mascotImageName)  
+            Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: ContentMode.fit)
             
@@ -25,6 +24,6 @@ struct LionView: View {
 
 struct LionView_Previews: PreviewProvider {
     static var previews: some View {
-        LionView().environmentObject(CheerViewModel())
+        LionView(imageName: "Mascot0")
     }
 }

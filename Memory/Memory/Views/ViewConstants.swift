@@ -12,7 +12,7 @@ struct ViewConstants {
     
     static let notPlayingBackgroundColor = Color.gray.opacity(0.70)
     static let memorizingBackgroundColor = Color.purple.opacity(0.70)
-    static let guessingBackgroundColor = Color.yellow.opacity(0.70)
+    static let guessingBackgroundColor = Color.orange.opacity(0.70)
     static let lostBackgroundColor = Color.red.opacity(0.70)
     static let wonBackgroundColor = Color.green.opacity(0.70)
     

@@ -15,7 +15,7 @@ struct GuessButtonView: View {
      let index : Int
      
      var body: some View {
-        Button(action: { self.gameModel.nextGuess(guess: self.index) }) {  //TODO: add action to make guess
+        Button(action: { self.gameModel.nextGuess(guess: self.index) }) { 
              RoundedRectangle(cornerRadius: 10)
                   .fill(colors[index])
                  .aspectRatio(1.0, contentMode: .fit)
@@ -31,3 +31,5 @@ struct ColorButtonView_Previews: PreviewProvider {
         GuessButtonView(colors: [.purple], index: 0)
     }
 }
+
+

@@ -56,7 +56,7 @@ class GameModel : ObservableObject {
         case .memorizing:
             gameState = .guessing
         default:
-            assert(false, "Button should be disabled while guessing")
+            assert(false, "Cannot advance state while guessing correctly")
         }
     }
 }

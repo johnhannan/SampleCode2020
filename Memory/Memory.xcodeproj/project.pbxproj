@@ -19,7 +19,10 @@
 		3B42D95324FE8FC400C699FD /* GuessButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42D95224FE8FC400C699FD /* GuessButtonView.swift */; };
 		3B42D95624FE8FD100C699FD /* MainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42D95424FE8FD000C699FD /* MainButtonView.swift */; };
 		3B42D95724FE8FD100C699FD /* SequenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42D95524FE8FD000C699FD /* SequenceView.swift */; };
+		3B63C3E0250A545F0016DCFC /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63C3DF250A545F0016DCFC /* Themes.swift */; };
 		3BAEFB972506608C009786DC /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEFB962506608C009786DC /* ViewConstants.swift */; };
+		3BB3E7C1250A55C700CCE35A /* ButtonLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3E7C0250A55C700CCE35A /* ButtonLabelView.swift */; };
+		3BB3E7C5250A5BE100CCE35A /* PreferenceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3E7C4250A5BE100CCE35A /* PreferenceButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,10 @@
 		3B42D95224FE8FC400C699FD /* GuessButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessButtonView.swift; sourceTree = "<group>"; };
 		3B42D95424FE8FD000C699FD /* MainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonView.swift; sourceTree = "<group>"; };
 		3B42D95524FE8FD000C699FD /* SequenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceView.swift; sourceTree = "<group>"; };
+		3B63C3DF250A545F0016DCFC /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		3BAEFB962506608C009786DC /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		3BB3E7C0250A55C700CCE35A /* ButtonLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabelView.swift; sourceTree = "<group>"; };
+		3BB3E7C4250A5BE100CCE35A /* PreferenceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		3B42D92F24FE8F7A00C699FD /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				3B27FD122507E8D400E0D686 /* GameModel.swift */,
 				3BAEFB9825066097009786DC /* Views */,
 				3B42D93624FE8F7C00C699FD /* Assets.xcassets */,
 				3BAEFB99250660AC009786DC /* BoilerPlate */,
@@ -121,11 +128,13 @@
 			isa = PBXGroup;
 			children = (
 				3B42D93424FE8F7A00C699FD /* MemoryView.swift */,
-				3B27FD122507E8D400E0D686 /* GameModel.swift */,
+				3B63C3DF250A545F0016DCFC /* Themes.swift */,
+				3BB3E7C0250A55C700CCE35A /* ButtonLabelView.swift */,
 				3B27FD102507CE9200E0D686 /* Color+Background.swift */,
 				3B42D95224FE8FC400C699FD /* GuessButtonView.swift */,
 				3B42D95424FE8FD000C699FD /* MainButtonView.swift */,
 				3B42D95524FE8FD000C699FD /* SequenceView.swift */,
+				3BB3E7C4250A5BE100CCE35A /* PreferenceButtonView.swift */,
 				3BAEFB962506608C009786DC /* ViewConstants.swift */,
 			);
 			path = Views;
@@ -245,12 +254,15 @@
 				3B42D93124FE8F7A00C699FD /* AppDelegate.swift in Sources */,
 				3B42D93324FE8F7A00C699FD /* SceneDelegate.swift in Sources */,
 				3B27FD132507E8D400E0D686 /* GameModel.swift in Sources */,
+				3B63C3E0250A545F0016DCFC /* Themes.swift in Sources */,
+				3BB3E7C1250A55C700CCE35A /* ButtonLabelView.swift in Sources */,
 				3BAEFB972506608C009786DC /* ViewConstants.swift in Sources */,
 				3B27FD112507CE9200E0D686 /* Color+Background.swift in Sources */,
 				3B42D95624FE8FD100C699FD /* MainButtonView.swift in Sources */,
 				3B42D95324FE8FC400C699FD /* GuessButtonView.swift in Sources */,
 				3B42D93524FE8F7A00C699FD /* MemoryView.swift in Sources */,
 				3B42D95724FE8FD100C699FD /* SequenceView.swift in Sources */,
+				3BB3E7C5250A5BE100CCE35A /* PreferenceButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,8 +25,8 @@ struct Preferences: View {
                 
                 Section(header: Text("Choose Theme")) {
                     Picker("Theme", selection: $selectedIndex) {
-                        ForEach(themes.indices, id: \.self) { (index) in
-                            (self.themes[index][0]).fixedSize().frame(width:15, height:15, alignment:.center)
+                        ForEach(themes.indices) { (index) in
+                            (self.themes[index][0]).fixedSize().frame(width:25, height:25, alignment:.center)
                         }
                     }
                 }

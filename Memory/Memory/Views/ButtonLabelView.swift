@@ -6,7 +6,7 @@
 //  Copyright © 2020 jjh9. All rights reserved.
 //
 // Label for the Guess Buttons
-// Initialize with either a color of a label (string of one character)
+// Initialize with either a color or a label (string of one character)
 // Used as the view for the Guess Buttons
 
 import SwiftUI

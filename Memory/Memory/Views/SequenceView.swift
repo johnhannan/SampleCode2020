@@ -12,10 +12,8 @@ import SwiftUI
 struct SequenceView: View {
 
     @EnvironmentObject var gameModel : GameModel
-    
     var currentSequence : [ButtonLabelView]
-    
-    let circleWidth :CGFloat = 15.0
+
 
     var body: some View {
         HStack{
@@ -28,6 +26,8 @@ struct SequenceView: View {
             }
         }
     }
+    
+    let circleWidth :CGFloat = 25.0
     
     var visibilityCount : Int {
         switch gameModel.gameState {

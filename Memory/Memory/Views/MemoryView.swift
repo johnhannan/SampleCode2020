@@ -10,23 +10,21 @@ import SwiftUI
 
 struct MemoryView: View {
     
-    //TODO: generalize choices to more than colors
-    let colors : [Color]  = [Color.red, .blue, .green, .yellow]
-    
     @ObservedObject var gameModel = GameModel(with: 4)  // 4 = colors.count
     
     let themes = Themes()
     @State var selectedThemeIndex = 0
     var currentTheme  : [ButtonLabelView] {themes[selectedThemeIndex] }
-    
-    
-    //var colorSequence : [Color]  {gameModel.sequence.map{self.colors[$0]}}
-    
     var currentSequence: [ButtonLabelView] {
         gameModel.sequence.map { (i) -> ButtonLabelView in currentTheme[i]
         }
     }
     
+    
+    //let colors : [Color]  = [Color.red, .blue, .green, .yellow]
+    //var colorSequence : [Color]  {gameModel.sequence.map{self.colors[$0]}}
+    
+
         var body: some View {
             ZStack(alignment: .center) {
                 Rectangle()

@@ -20,7 +20,7 @@ struct Themes {
     static let flowers = ["🌼", "🌹", "🌻", "🌸"].map {ButtonLabelView(label: $0) }
     let themes = [Self.colors, numbers, chess, sports, suits, flowers]
     
-    //TODO: make this subscriptable and with indices (like an array)
+  
     subscript(index:Int) -> [ButtonLabelView] {
         return themes[index]
     }

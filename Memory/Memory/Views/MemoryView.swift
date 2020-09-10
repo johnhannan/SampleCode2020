@@ -13,10 +13,19 @@ struct MemoryView: View {
     //TODO: generalize choices to more than colors
     let colors : [Color]  = [Color.red, .blue, .green, .yellow]
     
-    @ObservedObject var gameModel = GameModel(with: 4)
+    @ObservedObject var gameModel = GameModel(with: 4)  // 4 = colors.count
+    
+    let themes = Themes()
+    @State var selectedThemeIndex = 0
+    var currentTheme  : [ButtonLabelView] {themes[selectedThemeIndex] }
     
     
-    var colorSequence : [Color]  {gameModel.sequence.map{self.colors[$0]}}
+    //var colorSequence : [Color]  {gameModel.sequence.map{self.colors[$0]}}
+    
+    var currentSequence: [ButtonLabelView] {
+        gameModel.sequence.map { (i) -> ButtonLabelView in currentTheme[i]
+        }
+    }
     
         var body: some View {
             ZStack(alignment: .center) {
@@ -29,23 +38,23 @@ struct MemoryView: View {
 
                     
                     HStack {
-                        GuessButtonView(colors: self.colors, index:0)
-                        GuessButtonView(colors: self.colors, index:1)
+                        GuessButtonView(labels: currentTheme, index:0)
+                        GuessButtonView(labels: currentTheme, index:1)
                         
                     }
                     HStack {
-                        GuessButtonView(colors: self.colors, index:2)
-                        GuessButtonView(colors: self.colors, index:3)
+                        GuessButtonView(labels: currentTheme, index:2)
+                        GuessButtonView(labels: currentTheme, index:3)
                         
                     }
                     Spacer(minLength: 50)
-                    SequenceView(colorSequence: colorSequence)
+                    SequenceView(currentSequence: currentSequence)
                     
                     MainButtonView()
                     
                     HStack {
                         Spacer()
-                        PreferenceButtonView()
+                        PreferenceButtonView(themes: themes, selectedThemeIndex: $selectedThemeIndex)
                     }
                     
                     }.environmentObject(gameModel)

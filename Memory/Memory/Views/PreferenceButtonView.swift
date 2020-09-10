@@ -10,20 +10,24 @@ import SwiftUI
 
 struct PreferenceButtonView : View {
     @EnvironmentObject var gameModel : GameModel
-
+    @State private  var isShowingPreference = false
+    var themes : Themes
+    @Binding var selectedThemeIndex : Int
     
     var body: some View {
    
-        Button(action: { /*TODO: Add button action */ }) {
+        Button(action: { self.isShowingPreference.toggle() }) {
             Image(systemName: "gear")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 25, height: 25, alignment: .center)
                 .foregroundColor(.black)
                 .padding(10)
-
+        }.sheet(isPresented: $isShowingPreference) {
+            Preferences(isShowingPreferences: self.$isShowingPreference, model: self.gameModel, selectedIndex: self.$selectedThemeIndex, themes:self.themes)
             
-        } //TODO: Make Preferences View appear
+        }
+        
     }
 }
 

@@ -13,15 +13,15 @@ struct SequenceView: View {
 
     @EnvironmentObject var gameModel : GameModel
     
-    var colorSequence : [Color]
+    var currentSequence : [ButtonLabelView]
     
     let circleWidth :CGFloat = 15.0
 
     var body: some View {
         HStack{
-            ForEach(colorSequence.indices, id:\.self) { i in
-                Circle()
-                    .fill(self.colorSequence[i])
+            ForEach(currentSequence.indices, id:\.self) { i in
+                //Circle().fill(self.colors[i])
+                self.currentSequence[i]
                     .frame(width: self.circleWidth, height: self.circleWidth, alignment: .center)
                     .opacity(i<self.visibilityCount ? 1.0 : 0.0)
                 
@@ -32,7 +32,7 @@ struct SequenceView: View {
     var visibilityCount : Int {
         switch gameModel.gameState {
         case .memorizing, .won:
-            return colorSequence.count
+            return currentSequence.count
         case .guessing:
             return gameModel.nextGuessIndex
         default:

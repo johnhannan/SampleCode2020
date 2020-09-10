@@ -11,24 +11,26 @@ import SwiftUI
 struct GuessButtonView: View {
     @EnvironmentObject var gameModel : GameModel
     
-     let colors : [Color]
+     let labels : [ButtonLabelView]
      let index : Int
      
      var body: some View {
-        Button(action: { self.gameModel.nextGuess(guess: self.index) }) { 
-             RoundedRectangle(cornerRadius: 10)
-                  .fill(colors[index])
-                 .aspectRatio(1.0, contentMode: .fit)
-                 .shadow(radius: 20)
+        Button(action: { self.gameModel.nextGuess(guess: self.index) }) {
+                  labels[index].font(.system(size: labelFontSize))
+                  .clipShape(RoundedRectangle(cornerRadius: 10))
+            .shadow(radius: shadowRadius)
+            
         }.disabled(shouldDisableGuessButton)
      }
     
+    let labelFontSize : CGFloat = 100
+    let shadowRadius : CGFloat = 10
     var shouldDisableGuessButton : Bool {gameModel.gameState != .guessing }
 }
 
 struct ColorButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        GuessButtonView(colors: [.purple], index: 0)
+        GuessButtonView(labels: [ButtonLabelView(color:Color.purple)], index: 0)
     }
 }
 

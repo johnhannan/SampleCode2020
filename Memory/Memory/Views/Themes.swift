@@ -21,4 +21,10 @@ struct Themes {
     let themes = [Self.colors, numbers, chess, sports, suits, flowers]
     
     //TODO: make this subscriptable and with indices (like an array)
+    subscript(index:Int) -> [ButtonLabelView] {
+        return themes[index]
+    }
+    
+    var indices : Range<Int> {themes.indices}
+    
 }

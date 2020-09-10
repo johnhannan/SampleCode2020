@@ -22,7 +22,12 @@ class GameModel : ObservableObject {
     
     @Published var gameState : GameState = .notPlaying
     var sequence : [Int] = []
-    let sequenceLength = 4
+    
+    @Published var sequenceLength = 4 {
+        didSet {
+            resetGame()
+        }
+    }
     
     @Published var nextGuessIndex = 0
     

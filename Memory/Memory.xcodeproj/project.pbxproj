@@ -23,6 +23,7 @@
 		3BAEFB972506608C009786DC /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEFB962506608C009786DC /* ViewConstants.swift */; };
 		3BB3E7C1250A55C700CCE35A /* ButtonLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3E7C0250A55C700CCE35A /* ButtonLabelView.swift */; };
 		3BB3E7C5250A5BE100CCE35A /* PreferenceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3E7C4250A5BE100CCE35A /* PreferenceButtonView.swift */; };
+		3BB3E7CB250A8C4B00CCE35A /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB3E7CA250A8C4B00CCE35A /* Preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		3BAEFB962506608C009786DC /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		3BB3E7C0250A55C700CCE35A /* ButtonLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabelView.swift; sourceTree = "<group>"; };
 		3BB3E7C4250A5BE100CCE35A /* PreferenceButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceButtonView.swift; sourceTree = "<group>"; };
+		3BB3E7CA250A8C4B00CCE35A /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				3B42D95424FE8FD000C699FD /* MainButtonView.swift */,
 				3B42D95524FE8FD000C699FD /* SequenceView.swift */,
 				3BB3E7C4250A5BE100CCE35A /* PreferenceButtonView.swift */,
+				3BB3E7CA250A8C4B00CCE35A /* Preferences.swift */,
 				3BAEFB962506608C009786DC /* ViewConstants.swift */,
 			);
 			path = Views;
@@ -260,6 +263,7 @@
 				3B27FD112507CE9200E0D686 /* Color+Background.swift in Sources */,
 				3B42D95624FE8FD100C699FD /* MainButtonView.swift in Sources */,
 				3B42D95324FE8FC400C699FD /* GuessButtonView.swift in Sources */,
+				3BB3E7CB250A8C4B00CCE35A /* Preferences.swift in Sources */,
 				3B42D93524FE8F7A00C699FD /* MemoryView.swift in Sources */,
 				3B42D95724FE8FD100C699FD /* SequenceView.swift in Sources */,
 				3BB3E7C5250A5BE100CCE35A /* PreferenceButtonView.swift in Sources */,

@@ -13,7 +13,6 @@ struct MainButtonView: View {
     
     let buttonTextSize :CGFloat = 40
     
-   
     var body : some View {
         Button(action: { self.gameModel.advanceGameState() }) {
             ZStack {
@@ -26,6 +25,9 @@ struct MainButtonView: View {
             }
         }.disabled(shouldDisableMainButton)
     }
+
+    
+    let buttonTextSize :CGFloat = 40
     
     var shouldDisableMainButton : Bool { gameModel.gameState == .guessing }
     

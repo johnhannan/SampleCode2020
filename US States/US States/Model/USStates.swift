@@ -8,7 +8,46 @@
 
 import Foundation
 
+struct USState : Codable {
+    let name : String
+    let capital : String
+    let info : String
+    let year : Int
+    var favorite : Bool
+    let visited : Bool
+    let images : [String]
+    
+    enum CodingKeys : String, CodingKey {
+        case name = "state"
+        case capital
+        case info
+        case year
+        case favorite
+        case visited
+        case images
+    }
+}
+
+typealias AllStates = [USState]
+
 class USStates : ObservableObject {
     
+    var  allStates : [USState]
     
+    init() {
+        
+        let filename = "StateData"
+        let mainBundle = Bundle.main
+        let jsonURL = mainBundle.url(forResource: filename, withExtension: "json")!
+        
+        do {
+            let data = try Data(contentsOf: jsonURL)
+            let decoder = JSONDecoder()
+            allStates = try decoder.decode(AllStates.self, from: data)
+        } catch  {
+            allStates = []
+        }
+      
+        
+    }
 }

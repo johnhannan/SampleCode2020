@@ -24,16 +24,19 @@ struct DetailView: View {
                 .resizable()
                 .padding()
                     .scaledToFill()
-                    .frame(height: 200)
+                    .frame(height: self.imageHeight)
                 .clipped()
                 .listRowInsets(EdgeInsets())
             }.padding()
         }
     }
+    
+    let imageHeight : CGFloat = 400
 }
 
-//struct DetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailView()
-//    }
-//}
+struct DetailView_Previews: PreviewProvider {
+    @State static var states = USStates()
+    static var previews: some View {
+        DetailView(state: $states.allStates[5])
+    }
+}

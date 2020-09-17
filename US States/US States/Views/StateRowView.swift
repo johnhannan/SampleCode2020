@@ -21,10 +21,12 @@ struct StateRowView: View {
             Image(state.name)
             .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: nil, height: 60, alignment: .center)
+                .frame(width: nil, height: rowHeight, alignment: .center)
             Image(systemName: state.favorite ? "star.fill" : "star")
         }.padding()
     }
+    
+    let rowHeight : CGFloat = 60
 }
 
 struct StateRowView_Previews: PreviewProvider {

@@ -17,8 +17,9 @@ struct FavoriteButton: View {
     }
 }
 
-//struct FavoriteButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FavoriteButton()
-//    }
-//}
+struct FavoriteButton_Previews: PreviewProvider {
+    @State static var favorite = true
+    static var previews: some View {
+        FavoriteButton(isFavorite: $favorite)
+    }
+}

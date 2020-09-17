@@ -10,12 +10,21 @@ import SwiftUI
 
 
 struct USStatesListView: View {
-    @ObservedObject var usstates = USStates()
+    @State var usstates = USStates()
     
     var body: some View {
-        //let _ = UserDefaults.standard.set(JSONDecoder(), forKey: "Decoder")
-        
-        return Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                
+                ForEach(usstates.allStates.indices, id:\.self) {index in
+                    
+                    NavigationLink(destination: DetailView(state: self.$usstates.allStates[index])) {
+                        StateRowView(state: self.usstates.allStates[index])
+                    }
+                    
+                }
+            }.navigationBarTitle("US States")
+        }
     }
 }
 

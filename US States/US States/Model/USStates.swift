@@ -30,9 +30,9 @@ struct USState : Codable {
 
 typealias AllStates = [USState]
 
-class USStates : ObservableObject {
+struct USStates  {
     
-    var  allStates : [USState]
+    var  allStates : AllStates
     
     init() {
         
@@ -45,6 +45,7 @@ class USStates : ObservableObject {
             let decoder = JSONDecoder()
             allStates = try decoder.decode(AllStates.self, from: data)
         } catch  {
+           print("Error info: \(error)")
             allStates = []
         }
       

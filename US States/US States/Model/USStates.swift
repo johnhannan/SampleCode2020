@@ -35,7 +35,6 @@ typealias AllStates = [USState]
 
 struct USStates  {
     var  allStates : AllStates
-    //var  statesByInitial : [String:AllStates]
     
     init() {
         let filename = "StateData"
@@ -55,15 +54,14 @@ struct USStates  {
     }
     
     
-    
-    
-    
-    func sectionTitles(for property: (USState) -> String) -> [String] {
+    // the ordered list of all the titles for states given by the property
+    // the property returns the title for a state
+    func stateTitles(for property: (USState) -> String) -> [String] {
         let titles = Set(allStates.map(property))
         return titles.sorted()
-        
     }
     
+    // the list of indices for all the staters satisfying the given property
     func indices(for property: (USState) -> Bool) -> [Int] {
         let filteredStates = allStates.filter(property)
         let indices = filteredStates.map {s in allStates.firstIndex(where: {$0.name == s.name})!}

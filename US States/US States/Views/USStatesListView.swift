@@ -28,13 +28,12 @@ struct USStatesListView: View {
                     }
                 }
                 
-            } else {
-                
+            } else {  // by Name or by Decade
+                        // we use function sectionTitles(for:) and sectionFilter(for:) to customize based on the value of sectionStyle
                 
                 ForEach( sectionTitles(for: sectionStyle), id: \.self) { sectionTitle in
                     Section(header: Text(sectionTitle)) {
-                        //Text(sectionTitle)
-                        SectionViews(usstates: self.$usstates, property: sectionFilter(for: sectionStyle, key: sectionTitle))
+                        SectionViews(usstates: self.$usstates, property: sectionFilter(for: sectionStyle, sectionTitle: sectionTitle))
                     }
                 }
             }
@@ -42,33 +41,34 @@ struct USStatesListView: View {
         .navigationBarTitle("US States", displayMode: .inline)
     }
     
-    func sectionFilter(for sectionStyle:SectionStyle, key:String) ->  ((USState) -> Bool) {
+    // generate a filter (predicate function) that tests whether a state belongs in the section with title sectionTitle using sectionStyle (by Name or by Decade)
+    func sectionFilter(for sectionStyle:SectionStyle, sectionTitle:String) ->  ((USState) -> Bool) {
         switch sectionStyle {
         case .byName:
-            return {$0.name.firstLetter! == key}
+            return {$0.name.firstLetter! == sectionTitle}
         case .byDecade:
-            return {$0.name.firstLetter! == key}
+            return {$0.name.firstLetter! == sectionTitle}
         default:
-            assert(false, "No section titles for .none option")
+            assert(false, "No section filtering for .none option")
         }
         
     }
     
-    
+    // generate array of section titles based on section style
     func sectionTitles(for sectionStyle:SectionStyle) -> [String] {
         switch sectionStyle {
         case .byName:
-            return self.usstates.sectionTitles(for: {$0.name.firstLetter!})
+            return self.usstates.stateTitles(for: {$0.name.firstLetter!})
         case .byDecade:
-            return self.usstates.sectionTitles(for: {$0.name.firstLetter!})
+            return self.usstates.stateTitles(for: {$0.name.firstLetter!})
         default:
-            assert(false, "Shouldn't get here")
+            assert(false, "No section titles for .non option")
         }
         
     }
 }
 
-
+// views for all the states satisfying the given property.  Obtains bindings for states by finnding the indices of the states satisfying the property.
 struct SectionViews : View {
     @Binding var usstates : USStates
     let property : ((USState) -> Bool)

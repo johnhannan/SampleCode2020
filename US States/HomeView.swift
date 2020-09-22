@@ -11,19 +11,19 @@ import SwiftUI
 struct HomeView: View {
     @State var usstates = USStates()
     @State var showingPreferences = false
-    
+    @State var sectionStyle : SectionStyle = .none
     
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: USStatesListView(usstates: $usstates)) {
+                NavigationLink(destination: USStatesListView(usstates: $usstates, sectionStyle: $sectionStyle)) {
                     Text("See All")
                 }
             }
             .navigationBarTitle(Text("My Home"))
             .navigationBarItems(trailing: preferenceButton)
             .sheet(isPresented: $showingPreferences) {
-                Preferences(usstates: self.$usstates, showingPreferences: self.$showingPreferences)
+                Preferences(usstates: self.$usstates, showingPreferences: self.$showingPreferences, sectionStyle: $sectionStyle)
             }
         }
     }

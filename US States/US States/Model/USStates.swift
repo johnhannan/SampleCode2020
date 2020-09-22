@@ -26,6 +26,9 @@ struct USState : Codable {
         case visited
         case images
     }
+    
+    var centuryFounded: Int { year/100 }
+    var decadeFounded : Int { year/10*10}
 }
 
 typealias AllStates = [USState]
@@ -50,6 +53,8 @@ struct USStates  {
         }
         
     }
+    
+    
     
     
     

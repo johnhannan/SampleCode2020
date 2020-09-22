@@ -11,13 +11,22 @@ import SwiftUI
 struct Preferences: View {
     @Binding var usstates : USStates
     @Binding var showingPreferences : Bool
+    @Binding var sectionStyle: SectionStyle
     
     var body: some View {
         NavigationView {
             Form {
                 
-                Text("Preferences")
                 
+                Section(header: Text("List Sections")) {
+                    Picker("Sections", selection: $sectionStyle) {
+                        ForEach(SectionStyle.allCases, id: \.self) { sec in
+                            Text(sec.rawValue)
+                        }
+                    }
+                    .labelsHidden()
+                    .pickerStyle(SegmentedPickerStyle())
+                }
                 Section() {
                     HStack {
                         Spacer()
@@ -35,7 +44,8 @@ struct Preferences: View {
 struct Preferences_Previews: PreviewProvider {
     @State static var usstates = USStates()
     @State static var showing = false
+    @State static var sectionStyle : SectionStyle = .none
     static var previews: some View {
-        Preferences(usstates: $usstates, showingPreferences: $showing)
+        Preferences(usstates: $usstates, showingPreferences: $showing, sectionStyle: $sectionStyle)
     }
 }

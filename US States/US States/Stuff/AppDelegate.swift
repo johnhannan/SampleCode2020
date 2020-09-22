@@ -15,6 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        let navProxy = UINavigationBar.appearance()
+//        navProxy.barTintColor = UIColor.darkTan
+//        navProxy.tintColor = UIColor.lightTan
+//        navProxy.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.lightTan]
+//        
+//        UIScrollView.appearance().backgroundColor = UIColor.lightTan
+//        UITableViewCell.appearance().backgroundColor = UIColor.lightTan
+        
+        
         return true
     }
 

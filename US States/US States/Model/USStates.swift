@@ -31,24 +31,25 @@ struct USState : Codable {
 typealias AllStates = [USState]
 
 struct USStates  {
-    
     var  allStates : AllStates
     
     init() {
-        
         let filename = "StateData"
         let mainBundle = Bundle.main
-        let jsonURL = mainBundle.url(forResource: filename, withExtension: "json")!
+        let bundleURL = mainBundle.url(forResource: filename, withExtension: "json")!
+        
         
         do {
-            let data = try Data(contentsOf: jsonURL)
+            let data = try Data(contentsOf: bundleURL)
             let decoder = JSONDecoder()
             allStates = try decoder.decode(AllStates.self, from: data)
         } catch  {
-           print("Error info: \(error)")
+            print("Error info: \(error)")
             allStates = []
         }
-      
-        
     }
+    
+
+    
 }
+

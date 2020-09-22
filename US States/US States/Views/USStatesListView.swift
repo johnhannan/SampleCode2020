@@ -10,26 +10,24 @@ import SwiftUI
 
 
 struct USStatesListView: View {
-    @State var usstates = USStates()
+    @Binding  var usstates : USStates
     
     var body: some View {
-        NavigationView {
+
             List {
-                
                 ForEach(usstates.allStates.indices, id:\.self) {index in
-                    
                     NavigationLink(destination: DetailView(state: self.$usstates.allStates[index])) {
                         StateRowView(state: self.usstates.allStates[index])
                     }
-                    
                 }
-            }.navigationBarTitle("US States")
-        }
+            }
+            .navigationBarTitle("US States", displayMode: .inline)
     }
 }
 
 struct USStatesListView_Previews: PreviewProvider {
+    @State static var usstates = USStates()
     static var previews: some View {
-        USStatesListView()
+        USStatesListView(usstates: $usstates)
     }
 }

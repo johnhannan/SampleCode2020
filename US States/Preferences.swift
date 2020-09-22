@@ -9,11 +9,22 @@
 import SwiftUI
 
 struct Preferences: View {
+    @Binding var usstates : USStates
+    @Binding var showingPreferences : Bool
+    
     var body: some View {
         NavigationView {
             Form {
                 
                 Text("Preferences")
+                
+                Section() {
+                    HStack {
+                        Spacer()
+                        Button("Dismiss") {self.showingPreferences.toggle()}
+                        Spacer()
+                    }
+                }
                 
             }
             .navigationBarTitle("Preferences")
@@ -22,7 +33,9 @@ struct Preferences: View {
 }
 
 struct Preferences_Previews: PreviewProvider {
+    @State static var usstates = USStates()
+    @State static var showing = false
     static var previews: some View {
-        Preferences()
+        Preferences(usstates: $usstates, showingPreferences: $showing)
     }
 }

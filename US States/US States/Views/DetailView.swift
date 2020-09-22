@@ -29,9 +29,10 @@ struct DetailView: View {
                 .listRowInsets(EdgeInsets())
             }.padding()
         }
+        .navigationBarTitle(state.name)
     }
     
-    let imageHeight : CGFloat = 400
+    let imageHeight : CGFloat = 200
 }
 
 struct DetailView_Previews: PreviewProvider {

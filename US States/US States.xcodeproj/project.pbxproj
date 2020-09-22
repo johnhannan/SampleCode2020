@@ -22,6 +22,7 @@
 		3B72FF462513C6C5001C4D42 /* StateRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72FF452513C6C5001C4D42 /* StateRowView.swift */; };
 		3B72FF482513CCB4001C4D42 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72FF472513CCB4001C4D42 /* DetailView.swift */; };
 		3B72FF4A2513CDAE001C4D42 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72FF492513CDAE001C4D42 /* FavoriteButton.swift */; };
+		3B9EEFDD251A2BA9004DB783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EEFDC251A2BA9004DB783 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		3B72FF452513C6C5001C4D42 /* StateRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRowView.swift; sourceTree = "<group>"; };
 		3B72FF472513CCB4001C4D42 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3B72FF492513CDAE001C4D42 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		3B9EEFDC251A2BA9004DB783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		3B6D5A8B2510EFC60009E189 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B9EEFDC251A2BA9004DB783 /* HomeView.swift */,
 				3B72FF4125139D3E001C4D42 /* Preferences.swift */,
 				3B6D5A892510EFAC0009E189 /* USStatesListView.swift */,
 				3B72FF472513CCB4001C4D42 /* DetailView.swift */,
@@ -262,6 +265,7 @@
 				3B72FF462513C6C5001C4D42 /* StateRowView.swift in Sources */,
 				3B72FF4A2513CDAE001C4D42 /* FavoriteButton.swift in Sources */,
 				3B6D5A8A2510EFAC0009E189 /* USStatesListView.swift in Sources */,
+				3B9EEFDD251A2BA9004DB783 /* HomeView.swift in Sources */,
 				3B72FF4225139D3E001C4D42 /* Preferences.swift in Sources */,
 				3B6D5A8F2510F00C0009E189 /* USStates.swift in Sources */,
 				3B72FF442513A7D2001C4D42 /* String+FirstLetter.swift in Sources */,

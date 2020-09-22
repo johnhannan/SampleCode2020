@@ -23,6 +23,7 @@
 		3B72FF482513CCB4001C4D42 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72FF472513CCB4001C4D42 /* DetailView.swift */; };
 		3B72FF4A2513CDAE001C4D42 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72FF492513CDAE001C4D42 /* FavoriteButton.swift */; };
 		3B9EEFDD251A2BA9004DB783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EEFDC251A2BA9004DB783 /* HomeView.swift */; };
+		3B9EEFE1251A511F004DB783 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EEFE0251A511F004DB783 /* UserDefaultKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		3B72FF472513CCB4001C4D42 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3B72FF492513CDAE001C4D42 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3B9EEFDC251A2BA9004DB783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = SOURCE_ROOT; };
+		3B9EEFE0251A511F004DB783 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				3B6D5A672510EF920009E189 /* AppDelegate.swift */,
 				3B6D5A692510EF920009E189 /* SceneDelegate.swift */,
 				3B6D5A722510EF940009E189 /* LaunchScreen.storyboard */,
+				3B9EEFE0251A511F004DB783 /* UserDefaultKeys.swift */,
 			);
 			path = Stuff;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				3B9EEFDD251A2BA9004DB783 /* HomeView.swift in Sources */,
 				3B72FF4225139D3E001C4D42 /* Preferences.swift in Sources */,
 				3B6D5A8F2510F00C0009E189 /* USStates.swift in Sources */,
+				3B9EEFE1251A511F004DB783 /* UserDefaultKeys.swift in Sources */,
 				3B72FF442513A7D2001C4D42 /* String+FirstLetter.swift in Sources */,
 				3B6D5A682510EF920009E189 /* AppDelegate.swift in Sources */,
 				3B6D5A6A2510EF920009E189 /* SceneDelegate.swift in Sources */,

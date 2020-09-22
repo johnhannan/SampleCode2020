@@ -32,6 +32,7 @@ typealias AllStates = [USState]
 
 struct USStates  {
     var  allStates : AllStates
+    //var  statesByInitial : [String:AllStates]
     
     init() {
         let filename = "StateData"
@@ -47,9 +48,21 @@ struct USStates  {
             print("Error info: \(error)")
             allStates = []
         }
+        
     }
     
-
+    
+    
+    func sectionTitles(for property: (USState) -> String) -> [String] {
+        let titles = Set(allStates.map(property))
+        return titles.sorted()
+        
+    }
+    
+    func indices(for property: (USState) -> Bool) -> [Int] {
+        let filteredStates = allStates.filter(property)
+        let indices = filteredStates.map {s in allStates.firstIndex(where: {$0.name == s.name})!}
+        return indices
+    }
     
 }
-

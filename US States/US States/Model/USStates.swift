@@ -27,6 +27,7 @@ struct USState : Codable {
         case images
     }
     
+    var image : String { images.count > 0 ? images[0] : name }
     var centuryFounded: Int { year/100 }
     var decadeFounded : Int { year/10*10}
 }
@@ -53,6 +54,11 @@ struct USStates  {
         
     }
     
+    var centuries: [Int] {
+        let allCenturies = allStates.map({ $0.centuryFounded })
+        let duplicatesRemoved = Array(Set(allCenturies))
+        return duplicatesRemoved.sorted()
+    }
     
     // the ordered list of all the titles for states given by the property
     // the property returns the title for a state

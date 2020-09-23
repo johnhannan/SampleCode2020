@@ -23,6 +23,9 @@
 		3B72FF462513C6C5001C4D42 /* StateRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72FF452513C6C5001C4D42 /* StateRowView.swift */; };
 		3B72FF482513CCB4001C4D42 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72FF472513CCB4001C4D42 /* DetailView.swift */; };
 		3B72FF4A2513CDAE001C4D42 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72FF492513CDAE001C4D42 /* FavoriteButton.swift */; };
+		3B7949D7251B894C009A4BB2 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7949D6251B894C009A4BB2 /* CategoryRow.swift */; };
+		3B7949DB251B8A45009A4BB2 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7949DA251B8A45009A4BB2 /* CategoryItem.swift */; };
+		3B7949E1251BBDE2009A4BB2 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7949E0251BBDE2009A4BB2 /* Categories.swift */; };
 		3B9EEFDD251A2BA9004DB783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EEFDC251A2BA9004DB783 /* HomeView.swift */; };
 		3B9EEFE1251A511F004DB783 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EEFE0251A511F004DB783 /* UserDefaultKeys.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,9 @@
 		3B72FF452513C6C5001C4D42 /* StateRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRowView.swift; sourceTree = "<group>"; };
 		3B72FF472513CCB4001C4D42 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3B72FF492513CDAE001C4D42 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		3B7949D6251B894C009A4BB2 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		3B7949DA251B8A45009A4BB2 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		3B7949E0251BBDE2009A4BB2 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		3B9EEFDC251A2BA9004DB783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = SOURCE_ROOT; };
 		3B9EEFE0251A511F004DB783 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,14 +137,15 @@
 			isa = PBXGroup;
 			children = (
 				3B3AD456251B75C6005B05E7 /* SectionViews.swift */,
+				3B7949D6251B894C009A4BB2 /* CategoryRow.swift */,
+				3B7949DA251B8A45009A4BB2 /* CategoryItem.swift */,
 				3B9EEFDC251A2BA9004DB783 /* HomeView.swift */,
+				3B7949E0251BBDE2009A4BB2 /* Categories.swift */,
 				3B72FF4125139D3E001C4D42 /* Preferences.swift */,
 				3B6D5A892510EFAC0009E189 /* USStatesListView.swift */,
 				3B72FF472513CCB4001C4D42 /* DetailView.swift */,
 				3B72FF492513CDAE001C4D42 /* FavoriteButton.swift */,
 				3B72FF452513C6C5001C4D42 /* StateRowView.swift */,
-				3B6D5A922510F4110009E189 /* Color+Custom.swift */,
-				3B6D5A6D2510EF940009E189 /* Assets.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +153,8 @@
 		3B6D5A8C2510EFD60009E189 /* Stuff */ = {
 			isa = PBXGroup;
 			children = (
+				3B6D5A6D2510EF940009E189 /* Assets.xcassets */,
+				3B6D5A922510F4110009E189 /* Color+Custom.swift */,
 				3B6D5A672510EF920009E189 /* AppDelegate.swift */,
 				3B6D5A692510EF920009E189 /* SceneDelegate.swift */,
 				3B6D5A722510EF940009E189 /* LaunchScreen.storyboard */,
@@ -267,9 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6D5A932510F4110009E189 /* Color+Custom.swift in Sources */,
+				3B7949E1251BBDE2009A4BB2 /* Categories.swift in Sources */,
 				3B72FF482513CCB4001C4D42 /* DetailView.swift in Sources */,
 				3B72FF462513C6C5001C4D42 /* StateRowView.swift in Sources */,
 				3B72FF4A2513CDAE001C4D42 /* FavoriteButton.swift in Sources */,
+				3B7949D7251B894C009A4BB2 /* CategoryRow.swift in Sources */,
 				3B6D5A8A2510EFAC0009E189 /* USStatesListView.swift in Sources */,
 				3B9EEFDD251A2BA9004DB783 /* HomeView.swift in Sources */,
 				3B72FF4225139D3E001C4D42 /* Preferences.swift in Sources */,
@@ -278,6 +289,7 @@
 				3B72FF442513A7D2001C4D42 /* String+FirstLetter.swift in Sources */,
 				3B6D5A682510EF920009E189 /* AppDelegate.swift in Sources */,
 				3B3AD457251B75C6005B05E7 /* SectionViews.swift in Sources */,
+				3B7949DB251B8A45009A4BB2 /* CategoryItem.swift in Sources */,
 				3B6D5A6A2510EF920009E189 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

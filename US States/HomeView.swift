@@ -13,9 +13,17 @@ struct HomeView: View {
     @State var showingPreferences = false
     @State var sectionStyle : SectionStyle = .none
     
+    var homeState : USState {
+        return usstates.allStates[37]
+    }
+    
     var body: some View {
         NavigationView {
             List {
+                HomeState(state: homeState)
+                    
+                Categories(usstates: $usstates)
+                
                 NavigationLink(destination: USStatesListView(usstates: $usstates, sectionStyle: sectionStyle)) {
                     Text("See All")
                 }
@@ -42,5 +50,18 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+
+struct HomeState: View {
+    var state : USState
+    var body: some View {
+        Image(state.image)
+            .resizable()
+            .scaledToFill()
+            .frame(height: 200)
+            .clipped()
+            .listRowInsets(EdgeInsets())
     }
 }

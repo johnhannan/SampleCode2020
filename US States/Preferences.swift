@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Preferences: View {
-    @Binding var usstates : USStates
+    var usstates : USStates
     @Binding var showingPreferences : Bool
     @Binding var sectionStyle: SectionStyle
     
@@ -42,10 +42,10 @@ struct Preferences: View {
 }
 
 struct Preferences_Previews: PreviewProvider {
-    @State static var usstates = USStates()
+    static var usstates = USStates()
     @State static var showing = false
     @State static var sectionStyle : SectionStyle = .none
     static var previews: some View {
-        Preferences(usstates: $usstates, showingPreferences: $showing, sectionStyle: $sectionStyle)
+        Preferences(usstates: usstates, showingPreferences: $showing, sectionStyle: $sectionStyle)
     }
 }

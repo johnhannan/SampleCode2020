@@ -16,14 +16,14 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: USStatesListView(usstates: $usstates, sectionStyle: $sectionStyle)) {
+                NavigationLink(destination: USStatesListView(usstates: $usstates, sectionStyle: sectionStyle)) {
                     Text("See All")
                 }
             }
             .navigationBarTitle(Text("My Home"))
             .navigationBarItems(trailing: preferenceButton)
             .sheet(isPresented: $showingPreferences) {
-                Preferences(usstates: self.$usstates, showingPreferences: self.$showingPreferences, sectionStyle: $sectionStyle)
+                Preferences(usstates: self.usstates, showingPreferences: self.$showingPreferences, sectionStyle: self.$sectionStyle)
             }
         }
     }

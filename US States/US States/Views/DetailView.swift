@@ -13,7 +13,7 @@ struct DetailView: View {
     var body: some View {
         List {
             HStack {
-                Text("Founded in \(state.year)")
+                Text("Founded in " + String(format: "%04d", state.year))
                 Spacer()
                 FavoriteButton(isFavorite: $state.favorite)
             }

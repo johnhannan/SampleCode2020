@@ -62,8 +62,8 @@ struct USStates  {
     
     // the ordered list of all the titles for states given by the property
     // the property returns the title for a state
-    func stateTitles(for property: (USState) -> String) -> [String] {
-        let titles = Set(allStates.map(property))
+    func stateTitles(for titleFor: (USState) -> String) -> [String] {
+        let titles = Set(allStates.map(titleFor))
         return titles.sorted()
     }
     

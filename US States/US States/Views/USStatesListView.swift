@@ -33,7 +33,9 @@ struct USStatesListView: View {
                 
                 ForEach( sectionTitles(for: sectionStyle), id: \.self) { sectionTitle in
                     Section(header: Text(sectionTitle)) {
-                        SectionViews(usstates: self.$usstates, sectionStyle: self.sectionStyle, sectionTitle: sectionTitle)
+                        SectionViews(usstates: self.$usstates,
+                                     filter: sectionFilter(for: sectionStyle, sectionTitle: sectionTitle))
+                        
                     }
                 }
             }
@@ -47,13 +49,24 @@ struct USStatesListView: View {
     func sectionTitles(for sectionStyle:SectionStyle) -> [String] {
         switch sectionStyle {
         case .byName:
-            return self.usstates.stateTitles(for: {$0.name.firstLetter!})
+            return self.usstates.stateTitles(using: {$0.name.firstLetter!})
         case .byDecade:
-            return self.usstates.stateTitles(for: {$0.name.firstLetter!})
+            return self.usstates.stateTitles(using: {String($0.decadeAdmitted)})
         default:
             assert(false, "No section titles for .non option")
         }
-        
+    }
+    
+    // generate a filter (predicate function) that tests whether a state belongs in the section with title sectionTitle using sectionStyle (by Name or by Decade)
+    func sectionFilter(for sectionStyle:SectionStyle, sectionTitle:String) ->  ((USState) -> Bool) {
+        switch sectionStyle {
+        case .byName:
+            return {$0.name.firstLetter! == sectionTitle}
+        case .byDecade:
+            return {String($0.decadeAdmitted) == sectionTitle}
+        default:
+            assert(false, "No section filtering for .none option")
+        }
     }
 }
 

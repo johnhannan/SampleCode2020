@@ -13,11 +13,27 @@ struct CategoryRow: View {
     let categoryName: String
     let property : ((USState) -> Bool)
     
+    var nonEmpty : Bool {usstates.stateIndices(for: property).count > 0 }
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text(categoryName)
-                .font(.headline)
             
+            if nonEmpty {
+                Text(categoryName)
+                    .font(.headline)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(usstates.stateIndices(for: property), id:\.self) {index in
+                            NavigationLink(destination: DetailView(state:self.$usstates.allStates[index])) {
+                                CategoryItem(theState: self.$usstates.allStates[index])
+                            }
+                        }
+                    }
+                }.frame(height: 185)
+            } else {
+                EmptyView()
+            }
         }
     }
 }

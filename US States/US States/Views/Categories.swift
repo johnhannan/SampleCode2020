@@ -11,7 +11,14 @@ import SwiftUI
 struct Categories: View {
     @Binding var usstates : USStates
     var body: some View {
-        Text("Categories")
+        
+        Group {
+            CategoryRow(usstates: $usstates, categoryName: "Visited", property: {$0.visited})
+            CategoryRow(usstates: $usstates, categoryName: "Favorites", property: {$0.favorite})
+            ForEach(usstates.centuries, id:\.self) { century in
+                CategoryRow(usstates: $usstates, categoryName: "Founded in \(century)00's", property: {$0.centuryAdmitted == century})
+            }
+        }
     }
 }
 

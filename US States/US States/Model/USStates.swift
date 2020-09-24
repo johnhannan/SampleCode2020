@@ -28,23 +28,34 @@ struct USState : Codable {
     }
     
     var image : String { images.count > 0 ? images[0] : name }
-    var centuryFounded: Int { year/100 }
-    var decadeFounded : Int { year/10*10}
+    var centuryAdmitted: Int { year/100 }
+    var decadeAdmitted : Int { year/10*10}
 }
 
 typealias AllStates = [USState]
 
 struct USStates  {
-    var  allStates : AllStates
+    var  allStates : AllStates {
+        didSet {
+            saveData()
+        }
+    }
+    
+    let destinationURL : URL
     
     init() {
         let filename = "StateData"
         let mainBundle = Bundle.main
         let bundleURL = mainBundle.url(forResource: filename, withExtension: "json")!
         
+        let fileManager = FileManager.default
+        let documentURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        destinationURL = documentURL.appendingPathComponent(filename + ".json")
+        let fileExists = fileManager.fileExists(atPath: destinationURL.path)
         
         do {
-            let data = try Data(contentsOf: bundleURL)
+            let url = fileExists ? destinationURL : bundleURL
+            let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             allStates = try decoder.decode(AllStates.self, from: data)
         } catch  {
@@ -54,24 +65,47 @@ struct USStates  {
         
     }
     
-    var centuries: [Int] {
-        let allCenturies = allStates.map({ $0.centuryFounded })
-        let duplicatesRemoved = Array(Set(allCenturies))
-        return duplicatesRemoved.sorted()
+    func saveData() {
+        let encoder = JSONEncoder()
+        do {
+            let data  = try encoder.encode(allStates)
+            try data.write(to: self.destinationURL)
+        } catch  {
+            print("Error writing: \(error)")
+        }
     }
     
-    // the ordered list of all the titles for states given by the property
-    // the property returns the title for a state
-    func stateTitles(for titleFor: (USState) -> String) -> [String] {
+    var centuries: [Int] {
+        let allCenturies = Set(allStates.map({ $0.centuryAdmitted }))
+        return allCenturies.sorted()
+    }
+    
+
+    func stateTitles(using titleFor: (USState) -> String) -> [String] {
         let titles = Set(allStates.map(titleFor))
         return titles.sorted()
     }
     
-    // the list of indices for all the staters satisfying the given property
-    func indices(for property: (USState) -> Bool) -> [Int] {
+
+    func stateIndices(for property: (USState) -> Bool) -> [Int] {
         let filteredStates = allStates.filter(property)
         let indices = filteredStates.map {s in allStates.firstIndex(where: {$0.name == s.name})!}
         return indices
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+// the ordered list of all the titles for states given by the property
+// the property returns the title for a state
+// the list of indices for all the staters satisfying the given property
+

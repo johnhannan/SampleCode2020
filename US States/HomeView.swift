@@ -12,9 +12,10 @@ struct HomeView: View {
     @State var usstates = USStates()
     @State var showingPreferences = false
     @State var sectionStyle : SectionStyle = .none
+    @State var homeStateIndex : Int = UserDefaults.standard.integer(forKey: UserDefaultKeys.homeState) 
     
     var homeState : USState {
-        return usstates.allStates[37]
+        return usstates.allStates[homeStateIndex]
     }
     
     var body: some View {
@@ -31,7 +32,7 @@ struct HomeView: View {
             .navigationBarTitle(Text("My Home"))
             .navigationBarItems(trailing: preferenceButton)
             .sheet(isPresented: $showingPreferences) {
-                Preferences(usstates: self.usstates, showingPreferences: self.$showingPreferences, sectionStyle: self.$sectionStyle)
+                Preferences(usstates: self.usstates, showingPreferences: self.$showingPreferences, sectionStyle: self.$sectionStyle, homeStateIndex: $homeStateIndex)
             }
         }
     }

@@ -17,6 +17,7 @@
 		3B83292F252214D6009F7DB4 /* Restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B83292E252214D6009F7DB4 /* Restaurants.json */; };
 		3B83293525221518009F7DB4 /* DownTownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83293425221518009F7DB4 /* DownTownView.swift */; };
 		3B83293D25221533009F7DB4 /* DownTownMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83293C25221533009F7DB4 /* DownTownMap.swift */; };
+		3B83297F252255E0009F7DB4 /* LocationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83297E252255E0009F7DB4 /* LocationsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		3B83292E252214D6009F7DB4 /* Restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Restaurants.json; sourceTree = "<group>"; };
 		3B83293425221518009F7DB4 /* DownTownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownTownView.swift; sourceTree = "<group>"; };
 		3B83293C25221533009F7DB4 /* DownTownMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownTownMap.swift; sourceTree = "<group>"; };
+		3B83297E252255E0009F7DB4 /* LocationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				3B83292E252214D6009F7DB4 /* Restaurants.json */,
 				3B832929252214CE009F7DB4 /* TownData.swift */,
+				3B83297E252255E0009F7DB4 /* LocationsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				3B83293D25221533009F7DB4 /* DownTownMap.swift in Sources */,
 				3B8328F22522144B009F7DB4 /* Around_TownApp.swift in Sources */,
 				3B832924252214A5009F7DB4 /* UIColor+Custom.swift in Sources */,
+				3B83297F252255E0009F7DB4 /* LocationsManager.swift in Sources */,
 				3B83292A252214CE009F7DB4 /* TownData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +477,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.cse.hannan.Around-Town";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.jjh9.Around-Town";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,7 +499,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.cse.hannan.Around-Town";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.jjh9.Around-Town";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -8,64 +8,40 @@
 import SwiftUI
 
 struct DownTownView: View {
+    @ObservedObject var locationsManager = LocationsManager()
+    //@State private var selectedCategory = 0
+    
     var body: some View {
         NavigationView {
             
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                .navigationBarTitleDisplayMode(.large)
-                .navigationTitle(Text("Around Town"))
+            
+            DownTownMap()
+                
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    //  Principal placement same as inline displaymode title
-                    ToolbarItem(placement: .principal) {Text("Around Town")}
-                    ToolbarItem(placement: .bottomBar) {BottomBar()}
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        LeadingButtons()
-                    }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        TrailingButtons()
+                        searchButton
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        clearButton
                     }
                 }
-            
-        }
+        }.environmentObject(locationsManager)
+    }
+    
+    var searchButton : some View {
+        Picker(selection: $locationsManager.selectedCategory, label: Image(systemName: "magnifyingglass")) {
+            ForEach(TownData.categories.indices, id:\.self) { index in
+                Text(TownData.categories[index])
+            }
+        }.pickerStyle(MenuPickerStyle())
+    }
+    
+    var clearButton : some View {Button(action: {}) {
+        Image(systemName: "xmark.circle")}
     }
 }
 
-struct TrailingButtons: View {
-    var body : some View {
-        HStack{
-            Button(action: {}) {
-                Image(systemName: "tuningfork")
-            }
-            Button(action: {}) {
-                Image(systemName: "magnifyingglass")
-            }
-        }
-    }
-}
-
-struct LeadingButtons: View {
-    var body : some View {
-        HStack{
-            Button(action: {}) {
-                Image(systemName: "gear")
-            }
-            Button(action: {}) {
-                Image(systemName: "xmark.circle")
-            }
-        }
-    }
-}
-
-struct BottomBar: View {
-    var body : some View {
-        
-        HStack {
-            Spacer()
-            Text("Bottom")
-            Spacer()
-        }
-    }
-}
 
 struct DownTownView_Previews: PreviewProvider {
     static var previews: some View {

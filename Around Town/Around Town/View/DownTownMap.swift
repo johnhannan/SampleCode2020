@@ -6,10 +6,25 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct DownTownMap: View {
+    @EnvironmentObject var locationsManager : LocationsManager
+    @State var userTrackingMode  : MapUserTrackingMode = .follow
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Map(coordinateRegion: $locationsManager.region,
+            interactionModes: .all,
+            showsUserLocation: true,
+            userTrackingMode: $userTrackingMode,
+            annotationItems: locationsManager.placeItems)
+            { (item:Place) in  MapAnnotation(coordinate: item.coordinate) {
+            Image(item.category).renderingMode(.template)
+                .foregroundColor(Color.black)
+        }
+            
+        }
     }
 }
 

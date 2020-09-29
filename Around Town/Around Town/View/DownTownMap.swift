@@ -20,8 +20,7 @@ struct DownTownMap: View {
             userTrackingMode: $userTrackingMode,
             annotationItems: locationsManager.placeItems)
             { (item:Place) in  MapAnnotation(coordinate: item.coordinate) {
-            Image(item.category).renderingMode(.template)
-                .foregroundColor(Color.black)
+            Image(item.category)
         }
             
         }

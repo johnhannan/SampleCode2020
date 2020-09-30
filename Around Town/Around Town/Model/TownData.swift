@@ -25,6 +25,7 @@ struct TownData {
     //MARK: - Locations
     // Centered in downtown State College
     static let initialCoordinate = CLLocationCoordinate2D(latitude: 40.794978, longitude: -77.860785)
+    static let span : CLLocationDegrees = 0.01
     
     // define 4 corner points of downtown State College
     static let downtownCoordinates = [(40.791831951313,-77.865203974557),

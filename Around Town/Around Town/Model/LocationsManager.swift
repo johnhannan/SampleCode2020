@@ -10,7 +10,7 @@ import MapKit
 
 struct Place :Identifiable {
     var category : String
-    var placemark : CLPlacemark
+    var placemark : MKPlacemark
     var id = UUID()
     
     var coordinate : CLLocationCoordinate2D {placemark.location!.coordinate}
@@ -18,18 +18,19 @@ struct Place :Identifiable {
 
 class LocationsManager : ObservableObject {
     
-    @Published var region = MKCoordinateRegion(center: TownData.initialCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     
-    let degrees : CLLocationDegrees = 0.01
+    //MARK: Published values
+    @Published var region = MKCoordinateRegion(center: TownData.initialCoordinate, span: MKCoordinateSpan(latitudeDelta: TownData.span, longitudeDelta: TownData.span))
     
-    @Published var placeItems = [Place]()
+    // Map will annotate these items
+    @Published var mappedPlaces = [Place]()
     
-    var selectedCategory : Int = 0 {
-        didSet {
-            performSearch(on: TownData.categories[selectedCategory])
-        }
+
+    
+    //MARK: Local Search
+    var searchCategory : Int = 0 {
+        didSet {performSearch(on: TownData.categories[searchCategory])}
     }
-    
     
     func performSearch(on category:String) {
         
@@ -45,11 +46,8 @@ class LocationsManager : ObservableObject {
             let mapItems = response!.mapItems
             for item in mapItems {
                 let place = Place(category: category, placemark: item.placemark)
-                self.placeItems.append(place)
+                self.mappedPlaces.append(place)
             }
-                
-            
         }
     }
-    
 }

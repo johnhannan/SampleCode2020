@@ -13,7 +13,18 @@ struct Place :Identifiable {
     var placemark : MKPlacemark
     var id = UUID()
     
+    var highlighted : Bool = false
+    
+    var name : String {placemark.name ?? "No Name"}
+    var streetNumber : String {placemark.subThoroughfare ?? ""}
+    var streetName : String {placemark.thoroughfare ?? ""}
+    var address : String {streetNumber + streetName}
+    
     var coordinate : CLLocationCoordinate2D {placemark.location!.coordinate}
+    
+    mutating func highlightToggle() {
+        highlighted.toggle()
+    }
 }
 
 class LocationsManager : ObservableObject {
@@ -28,8 +39,12 @@ class LocationsManager : ObservableObject {
 
     
     //MARK: Local Search
-    var searchCategory : Int = 0 {
-        didSet {performSearch(on: TownData.categories[searchCategory])}
+    var searchCategoryIndex : Int = 0 {
+        didSet {performSearch(on: TownData.categories[searchCategoryIndex])}
+    }
+    
+    func clearSearch() {
+        mappedPlaces.removeAll()
     }
     
     func performSearch(on category:String) {

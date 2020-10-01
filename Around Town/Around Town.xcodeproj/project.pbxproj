@@ -18,6 +18,8 @@
 		3B83293525221518009F7DB4 /* DownTownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83293425221518009F7DB4 /* DownTownView.swift */; };
 		3B83293D25221533009F7DB4 /* DownTownMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83293C25221533009F7DB4 /* DownTownMap.swift */; };
 		3B83297F252255E0009F7DB4 /* LocationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83297E252255E0009F7DB4 /* LocationsManager.swift */; };
+		3B832A9525263F3C009F7DB4 /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B832A9425263F3B009F7DB4 /* PlacesView.swift */; };
+		3B832A9A25263FB6009F7DB4 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B832A9925263FB6009F7DB4 /* PlaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		3B83293425221518009F7DB4 /* DownTownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownTownView.swift; sourceTree = "<group>"; };
 		3B83293C25221533009F7DB4 /* DownTownMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownTownMap.swift; sourceTree = "<group>"; };
 		3B83297E252255E0009F7DB4 /* LocationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsManager.swift; sourceTree = "<group>"; };
+		3B832A9425263F3B009F7DB4 /* PlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
+		3B832A9925263FB6009F7DB4 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 		3B8328E52522144B009F7DB4 = {
 			isa = PBXGroup;
 			children = (
+				3B832A9425263F3B009F7DB4 /* PlacesView.swift */,
+				3B832A9925263FB6009F7DB4 /* PlaceView.swift */,
 				3B8328F02522144B009F7DB4 /* Around Town */,
 				3B8329022522144D009F7DB4 /* Around TownTests */,
 				3B83290D2522144D009F7DB4 /* Around TownUITests */,
@@ -307,7 +313,9 @@
 			files = (
 				3B83293525221518009F7DB4 /* DownTownView.swift in Sources */,
 				3B83293D25221533009F7DB4 /* DownTownMap.swift in Sources */,
+				3B832A9A25263FB6009F7DB4 /* PlaceView.swift in Sources */,
 				3B8328F22522144B009F7DB4 /* Around_TownApp.swift in Sources */,
+				3B832A9525263F3C009F7DB4 /* PlacesView.swift in Sources */,
 				3B832924252214A5009F7DB4 /* UIColor+Custom.swift in Sources */,
 				3B83297F252255E0009F7DB4 /* LocationsManager.swift in Sources */,
 				3B83292A252214CE009F7DB4 /* TownData.swift in Sources */,

@@ -11,50 +11,50 @@ import MapKit
 struct DownTownMap: View {
     @EnvironmentObject var locationsManager : LocationsManager
     @State var userTrackingMode  : MapUserTrackingMode = .follow
-    @State var annotationIndex = 0
+    
     
     var body: some View {
         
-        Map(coordinateRegion: $locationsManager.region,
-            interactionModes: .all,
-            showsUserLocation: true,
-            userTrackingMode: $userTrackingMode,
-            annotationItems: locationsManager.mappedPlaces,
-            annotationContent: annotationsForCategory)
-            
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    searchPicker
+
+            Map(coordinateRegion: $locationsManager.region,
+                interactionModes: .all,
+                showsUserLocation: true,
+                userTrackingMode: $userTrackingMode,
+                annotationItems: locationsManager.mappedPlaces,
+                annotationContent: annotationsForCategory)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        searchPicker
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        clearButton
+                    }
                 }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    clearButton
-                }
-            }
-    }
+        }
+       
+
+    
     
     var searchPicker : some View {
-        Picker(selection: $locationsManager.searchCategory, label: Image(systemName: "magnifyingglass")) {
+        Picker(selection: $locationsManager.searchCategoryIndex, label: Image(systemName: "magnifyingglass")) {
             ForEach(TownData.categories.indices, id:\.self) { index in
                 Text(TownData.categories[index])
             }
         }.pickerStyle(MenuPickerStyle())
     }
     
-    var clearButton : some View {Button(action: {}) {
+    var clearButton : some View {Button(action: {locationsManager.clearSearch()}) {
         Image(systemName: "xmark.circle")}
-    }
-    
-    var annotationChooser : some View {Button(action:{
-        annotationIndex = (annotationIndex + 1) % 3
-    }) {
-        Image(systemName: "mappin.circle")}
     }
     
 
     
+
+    //MARK: Three different functions for creating annotations
     func annotationsForCategory (item:Place) -> some MapAnnotationProtocol {
         MapAnnotation(coordinate: item.coordinate) {
-            Image(item.category)
+            Image(item.category).renderingMode(.template)
+                .foregroundColor(item.highlighted ? Color.red : Color.black)
         }
     }
     func annotationPins (item:Place) -> some MapAnnotationProtocol {
@@ -64,7 +64,11 @@ struct DownTownMap: View {
         MapMarker(coordinate: item.coordinate)
     }
     
+ 
+    
+    
 }
+
 
 struct DownTownMap_Previews: PreviewProvider {
     static var previews: some View {

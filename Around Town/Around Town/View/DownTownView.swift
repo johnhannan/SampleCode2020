@@ -13,20 +13,26 @@ struct DownTownView: View {
     var body: some View {
         NavigationView {
             
-            VStack {
+            ZStack {
                 
-            DownTownMap()
-                .navigationBarTitleDisplayMode(.inline)
+                DownTownMap()
+                    .navigationBarTitleDisplayMode(.inline)
                 
-            PlacesView()
-                .frame(height:placesHeight)
-                
+                if locationsManager.mappedPlaces.count > 0 {
+                    VStack {
+                        
+                        Spacer()
+                        
+                        PlacesView()
+                            .frame(height:placesHeight)
+                    }
+                }
             }
             
         }.environmentObject(locationsManager)
     }
     
-    var placesHeight : CGFloat = 60.0
+    var placesHeight : CGFloat = 70.0
 }
 
 

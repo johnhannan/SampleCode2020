@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PlaceView: View {
     @Binding  var places : [Place]
     var index : Int
     //var place : Place
     
-    var place : Place {places[index]}
+    // Need placeholder "empty" place when view is rendered after deleting annotations
+    var place : Place {index < places.count ? places[index] : Place.empty}
+    
     
     var body: some View {
         HStack {
@@ -21,17 +24,16 @@ struct PlaceView: View {
                 Text(place.address)
             }
             Button(action: {}, label: {Image(systemName: "info.circle")})
-        }.onAppear() {
-            places[index].highlightToggle()
-        }
-        .onDisappear() {
-            places[index].highlightToggle()
-        }
+        }.padding()
+        .foregroundColor(.white)
+        .background(RoundedRectangle(cornerRadius: 15).fill(Color.red)
+                       )
+
     }
 }
 
 //struct PlaceView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        PlaceView()
+//        PlaceView(places: .constant([Place(category: "any", placemark: MKPlacemark()]), index:0)
 //    }
 //}

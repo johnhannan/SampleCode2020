@@ -92,8 +92,6 @@
 		3B8328E52522144B009F7DB4 = {
 			isa = PBXGroup;
 			children = (
-				3B832A9425263F3B009F7DB4 /* PlacesView.swift */,
-				3B832A9925263FB6009F7DB4 /* PlaceView.swift */,
 				3B8328F02522144B009F7DB4 /* Around Town */,
 				3B8329022522144D009F7DB4 /* Around TownTests */,
 				3B83290D2522144D009F7DB4 /* Around TownUITests */,
@@ -165,9 +163,9 @@
 		3B832928252214C4009F7DB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3B83292E252214D6009F7DB4 /* Restaurants.json */,
 				3B832929252214CE009F7DB4 /* TownData.swift */,
 				3B83297E252255E0009F7DB4 /* LocationsManager.swift */,
+				3B83292E252214D6009F7DB4 /* Restaurants.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +175,8 @@
 			children = (
 				3B83293425221518009F7DB4 /* DownTownView.swift */,
 				3B83293C25221533009F7DB4 /* DownTownMap.swift */,
+				3B832A9425263F3B009F7DB4 /* PlacesView.swift */,
+				3B832A9925263FB6009F7DB4 /* PlaceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -12,19 +12,34 @@ struct Place :Identifiable {
     var category : String
     var placemark : MKPlacemark
     var id = UUID()
-    
+    var phoneNumber : String = ""
+    var url : String = ""
     var highlighted : Bool = false
     
-    var name : String {placemark.name ?? "No Name"}
+    var name : String {category == "empty" ? "" : placemark.name ?? "No Name"}
     var streetNumber : String {placemark.subThoroughfare ?? ""}
     var streetName : String {placemark.thoroughfare ?? ""}
     var address : String {streetNumber + streetName}
     
     var coordinate : CLLocationCoordinate2D {placemark.location!.coordinate}
     
+    init(mapItem:MKMapItem, category:String) {
+        self.category = category
+        self.placemark = mapItem.placemark
+        self.phoneNumber = mapItem.phoneNumber ?? ""
+        self.url = mapItem.url?.description ?? ""
+    }
+    
+    init(category:String, placemark:MKPlacemark) {
+        self.category = category
+        self.placemark = placemark
+    }
+    
     mutating func highlightToggle() {
         highlighted.toggle()
     }
+    
+    static let empty = Place(mapItem: MKMapItem(), category: "empty")
 }
 
 class LocationsManager : ObservableObject {

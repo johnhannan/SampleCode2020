@@ -9,9 +9,11 @@ import SwiftUI
 import MapKit
 
 struct PlaceView: View {
+    @EnvironmentObject var location : LocationsManager
     @Binding  var places : [Place]
     var index : Int
-    //var place : Place
+    
+    @State var showingActionSheet = false
     
     // Need placeholder "empty" place when view is rendered after deleting annotations
     var place : Place {index < places.count ? places[index] : Place.empty}
@@ -26,10 +28,26 @@ struct PlaceView: View {
             Button(action: {}, label: {Image(systemName: "info.circle")})
         }.padding()
         .foregroundColor(.white)
-        .background(RoundedRectangle(cornerRadius: 15).fill(Color.red)
-                       )
-
+        .background(RoundedRectangle(cornerRadius: 15).fill(Color.red))
+        
     }
+    
+    
+    var actionButtons : [Alert.Button] {
+        if place.phoneNumber.isEmpty && place.url.isEmpty {
+            return [directionsButton, .cancel()]
+        } else {
+            return [directionsButton, phoneButton, urlButton, .cancel()]}
+    }
+    
+    var directionsButton : Alert.Button {.default(Text("Directions")) {  }}
+    var phoneButton : Alert.Button {.default(Text(place.phoneNumber)) {
+        if let url = URL(string: "tel://" + place.phoneNumber) { UIApplication.shared.open(url) }
+        else {} }}
+    var urlButton : Alert.Button {.default(Text(place.url)) {
+        if let url = URL(string: place.url) {
+            UIApplication.shared.open(url)
+        } else {} }}
 }
 
 //struct PlaceView_Previews: PreviewProvider {

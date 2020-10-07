@@ -8,6 +8,12 @@
 import Foundation
 import MapKit
 
+struct Restaurant : Codable {
+    var name : String
+    var address : String
+}
+
+
 struct Place :Identifiable {
     var category : String
     var placemark : MKPlacemark
@@ -44,6 +50,17 @@ struct Place :Identifiable {
 
 class LocationsManager : ObservableObject {
     
+    init() {
+        let restaurantURL = Bundle.main.url(forResource: "Restaurants", withExtension: "json")!
+        do {
+            let data = try Data(contentsOf: restaurantURL)
+            let decoder = JSONDecoder()
+            restaurants = try decoder.decode([Restaurant].self, from: data)
+        } catch   {
+            print("Error decoding Restaurants: \(error)")
+            restaurants = []
+        }
+    }
     
     //MARK: Published values
     @Published var region = MKCoordinateRegion(center: TownData.initialCoordinate, span: MKCoordinateSpan(latitudeDelta: TownData.span, longitudeDelta: TownData.span))
@@ -51,7 +68,16 @@ class LocationsManager : ObservableObject {
     // Map will annotate these items
     @Published var mappedPlaces = [Place]()
     
-
+    
+    //MARK: Geocoding Restaurants
+    // List of restaurant names & addresses read in from JSON file
+    let restaurants : [Restaurant]
+    
+    // when user selects a restaurant we annotate map with it
+    var selectedRestaurant : Int = 0
+    
+    
+    
     
     //MARK: Local Search
     var searchCategoryIndex : Int = 0 {

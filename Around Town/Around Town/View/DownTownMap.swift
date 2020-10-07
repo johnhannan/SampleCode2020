@@ -24,6 +24,9 @@ struct DownTownMap: View {
                 annotationContent: annotationsForCategory)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
+                        diningButton
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         searchPicker
                     }
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -33,7 +36,13 @@ struct DownTownMap: View {
         }
        
 
-    
+    var diningButton : some View {
+        Picker(selection: $locationsManager.selectedRestaurant, label:Image(systemName: "map")) {
+            ForEach(locationsManager.restaurants.indices, id:\.self) {index in
+                Text(locationsManager.restaurants[index].name)
+            }
+        }.pickerStyle(MenuPickerStyle())
+    }
     
     var searchPicker : some View {
         Picker(selection: $locationsManager.searchCategoryIndex, label: Image(systemName: "magnifyingglass")) {

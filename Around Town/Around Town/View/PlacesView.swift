@@ -21,7 +21,7 @@ struct PlacesView: View {
                         .tabItem { Text("location")}
                 }
             }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)) //PageTabViewStyle()DefaultTabViewStyle()
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)) 
         .onChange(of: tabIndex) { [tabIndex] (newIndex) in
             locationsManager.mappedPlaces[newIndex].highlightToggle()
             locationsManager.mappedPlaces[tabIndex].highlightToggle()

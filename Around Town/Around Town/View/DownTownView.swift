@@ -27,6 +27,15 @@ struct DownTownView: View {
                             .frame(height:placesHeight)
                     }
                 }
+                
+                if locationsManager.route != nil {
+                    VStack {
+                        DirectionsView(route: $locationsManager.route)
+                            .frame(height:placesHeight)
+                        Spacer()
+                    }
+                    
+}
             }
             
         }.environmentObject(locationsManager)

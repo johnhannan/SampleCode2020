@@ -25,11 +25,13 @@ struct PlaceView: View {
                 Text(place.name)
                 Text(place.address)
             }
-            Button(action: {}, label: {Image(systemName: "info.circle")})
+            Button(action: {showingActionSheet.toggle()}, label: {Image(systemName: "info.circle")})
         }.padding()
         .foregroundColor(.white)
         .background(RoundedRectangle(cornerRadius: 15).fill(Color.red))
-        
+        .actionSheet(isPresented: $showingActionSheet) {
+            ActionSheet(title: Text(place.name), message: Text(place.address), buttons: actionButtons)
+        }
     }
     
     
@@ -40,10 +42,13 @@ struct PlaceView: View {
             return [directionsButton, phoneButton, urlButton, .cancel()]}
     }
     
-    var directionsButton : Alert.Button {.default(Text("Directions")) {  }}
+    var directionsButton : Alert.Button {.default(Text("Directions")) {
+        location.provideDirections(to: place)}}
+    
     var phoneButton : Alert.Button {.default(Text(place.phoneNumber)) {
         if let url = URL(string: "tel://" + place.phoneNumber) { UIApplication.shared.open(url) }
         else {} }}
+    
     var urlButton : Alert.Button {.default(Text(place.url)) {
         if let url = URL(string: place.url) {
             UIApplication.shared.open(url)

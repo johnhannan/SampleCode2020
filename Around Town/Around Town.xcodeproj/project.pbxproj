@@ -20,6 +20,8 @@
 		3B83297F252255E0009F7DB4 /* LocationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83297E252255E0009F7DB4 /* LocationsManager.swift */; };
 		3B832A9525263F3C009F7DB4 /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B832A9425263F3B009F7DB4 /* PlacesView.swift */; };
 		3B832A9A25263FB6009F7DB4 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B832A9925263FB6009F7DB4 /* PlaceView.swift */; };
+		3B832C1B252DF202009F7DB4 /* RestaurantsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B832C1A252DF202009F7DB4 /* RestaurantsManager.swift */; };
+		3B832C50252F7F2C009F7DB4 /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B832C4F252F7F2C009F7DB4 /* DirectionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		3B83297E252255E0009F7DB4 /* LocationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsManager.swift; sourceTree = "<group>"; };
 		3B832A9425263F3B009F7DB4 /* PlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
 		3B832A9925263FB6009F7DB4 /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		3B832C1A252DF202009F7DB4 /* RestaurantsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsManager.swift; sourceTree = SOURCE_ROOT; };
+		3B832C4F252F7F2C009F7DB4 /* DirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		3B832928252214C4009F7DB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3B832C1A252DF202009F7DB4 /* RestaurantsManager.swift */,
 				3B832929252214CE009F7DB4 /* TownData.swift */,
 				3B83297E252255E0009F7DB4 /* LocationsManager.swift */,
 				3B83292E252214D6009F7DB4 /* Restaurants.json */,
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				3B83293425221518009F7DB4 /* DownTownView.swift */,
+				3B832C4F252F7F2C009F7DB4 /* DirectionsView.swift */,
 				3B83293C25221533009F7DB4 /* DownTownMap.swift */,
 				3B832A9425263F3B009F7DB4 /* PlacesView.swift */,
 				3B832A9925263FB6009F7DB4 /* PlaceView.swift */,
@@ -313,6 +319,8 @@
 			files = (
 				3B83293525221518009F7DB4 /* DownTownView.swift in Sources */,
 				3B83293D25221533009F7DB4 /* DownTownMap.swift in Sources */,
+				3B832C50252F7F2C009F7DB4 /* DirectionsView.swift in Sources */,
+				3B832C1B252DF202009F7DB4 /* RestaurantsManager.swift in Sources */,
 				3B832A9A25263FB6009F7DB4 /* PlaceView.swift in Sources */,
 				3B8328F22522144B009F7DB4 /* Around_TownApp.swift in Sources */,
 				3B832A9525263F3C009F7DB4 /* PlacesView.swift in Sources */,

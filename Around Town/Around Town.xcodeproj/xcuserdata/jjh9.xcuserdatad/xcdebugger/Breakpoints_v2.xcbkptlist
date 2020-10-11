@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2488F426-C513-42F3-8526-81EB9AEB74C6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4774893B-7263-4BA6-867D-2149F69BC060"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Around Town/View/DownTownMap.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "searchPicker"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4774893B-7263-4BA6-867D-2149F69BC060 - ce72b94a86c53112"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.Text&gt; in Around_Town.DownTownMap.searchPicker.getter : some"
+                  moduleName = "Around Town"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jjh9/Development/475/SampleCode2020/Around%20Town/Around%20Town/View/DownTownMap.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "129">
+               </Location>
+               <Location
+                  uuid = "4774893B-7263-4BA6-867D-2149F69BC060 - 1207101109d559b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.Text&gt; in Around_Town.DownTownMap.searchPicker.getter : some"
+                  moduleName = "Around Town"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jjh9/Development/475/SampleCode2020/Around%20Town/Around%20Town/View/DownTownMap.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

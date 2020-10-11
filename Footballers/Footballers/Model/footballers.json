@@ -1,0 +1,452 @@
+[
+  {
+    "lastname": "Messi",
+    "home": "Argentina",
+    "info": "It has not been a good summer for the five-time Ballon d\u2019Or winner. As well being found guilty of tax fraud, Messi suffered heartbreak for a third successive major tournament with Argentina, this time missing a penalty in the final shootout and later shocking his country by announcing his retirement from international soccer. However, he still showed during that tournament, not least with his mesmeric free-kick against the United States and scintillating hat-trick off the bench against Panama, that he remains untouched as the best player on the planet.",
+    "rank": 1,
+    "team": "Barcelona",
+      "firstname": "Lionel",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Su\u00e1rez",
+    "home": "Uruguay",
+    "info": "Su\u00e1rez was another to endure a disappointing summer, with injury preventing him from getting on the pitch as Uruguay crashed out at the group stage. Still, he is coming off his most prolific season yet at club level, firing 53 goals in just 48 games for Barcelona. And the former Liverpool forward also does plenty to aid the performances of Messi and Neymar as part of the best-ever forward trio.",
+    "rank": 2,
+    "team": "Barcelona",
+      "firstname": "Luis",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Ronaldo",
+    "home": "Portugal",
+    "info": "In terms of silverware, Ronaldo has enjoyed an extraordinary past 12 months. On Sunday he added a long-sought first title with Portugal to a third Champions League winners\u2019 medal picked up with Real Madrid in May. The irony, though, was that he played very little part in either final. While injury was the cause of that, the fact remains that at the age of 31, he is no longer a player that dominates games, but rather, as he showed in the Euro 2016 semifinal against Wales, a player who produces decisive moments.",
+    "rank": 3,
+    "team": "Real Madrid",
+      "firstname": "Cristiano",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Neymar",
+    "home": "Brazil",
+    "info": "Brilliant at the start of last season, even suggesting that Barcelona could have a life beyond Messi, Neymar fully earned a place on the Ballon d\u2019Or podium for the first time and should even have taken second spot ahead of Ronaldo. But there is no question that he tired considerably at the climax of the campaign, which played its part in his side\u2019s exit from the Champions League. It is not surprising then that Barcelona prevented him from playing at the Copa America. Instead, he will feature at the Olympics before, Barcelona hopes, returning fully match sharp to the Camp Nou.",
+    "rank": 4,
+    "team": "Barcelona",
+      "firstname": "",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Bale",
+    "home": "Wales",
+    "info": "Overshadowed by the reputation and ego of Ronaldo at the Bernabeu, Bale showed at Euro 2016 that he is a capable of being the talisman for a team. Not only did he come up with crucial contributions as Wales reached the semifinals, he was also a superb blue-collar team player. His record at Real Madrid wasn\u2019t bad last season, either, scoring 19 goals in 23 La Liga appearances and often being far more influential over the course of 90 minutes than his more illustrious teammate.",
+    "rank": 5,
+    "team": "Real Madrid",
+      "firstname": "Gareth",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Griezmann",
+    "home": "France",
+    "info": "The Golden Boot and Golden Ball winner at Euro 2016, Griezmann was the spark for a France team that often lacked cohesion. With six goals, five in the knockout phase, it would be unfair to remember his tournament for his missed chance in the final. Having also scored 32 goals for Atl\u00e9tico last season, he has unquestionably elevated himself into the ranks of the world\u2019s best forwards.",
+    "rank": 6,
+    "team": "Atl\u00e9tico Madrid",
+      "firstname": "Antoine",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Iniesta",
+    "home": "Spain",
+    "info": "Spain\u2019s Euro 2016 campaign may not linger long in the memory, but Iniesta\u2019s performance in the group phase still provided plenty of thrills at the time. Handed the central playmaking role for the first time in a major tournament, Iniesta starred. Even at the age of 32, and having scored one league goal in his last two seasons, Iniesta\u2019s incisive passing and dribbling through the lines is a joy to behold.",
+    "rank": 7,
+    "team": "Barcelona",
+      "firstname": "Andres",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Neuer",
+    "home": "Germany",
+    "info": "He may have made a costly error in Germany\u2019s Euro 2016 semifinal defeat to France, but there can be little doubt that Neuer remains the benchmark for the modern goalkeeper. So good is he with his feet that his ability with his hands almost goes unnoticed.",
+    "rank": 8,
+    "team": "Bayern Munich",
+      "firstname": "Manuel",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Busquets",
+    "home": "Spain",
+    "info": "It may be true that, as Busquets himself said, \u201c People who don't like football don't appreciate my game,\u201d but to those who watch closely there is so much to admire. Just see how Barcelona struggles to move the ball without its fulcrum in front of the back four. When it comes to describing the Barcelona graduate, soon-to-be former Spain coach Vicente del Bosque did it best. \u201cIf you watch the whole game, you won\u2019t see Busquets,\u201d he said. \u201cBut watch Busquets and you will see the whole game.\u201d",
+    "rank": 9,
+    "team": "Barcelona",
+      "firstname": "Sergio",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Pogba",
+    "home": "France",
+    "info": "That he could well become the most expensive player in history this summer is indicative of a midfielder that possesses an unprecedented range of attributes. Strong, quick and skillful he has all the tools required to be the next global superstar. All that is holding him back so far, as was shown at Euro 2016, is consistency and perhaps a better positional understanding.",
+    "rank": 10,
+    "team": "Juventus",
+      "firstname": "Paul",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Modric",
+    "home": "Croatia",
+    "info": "Once voted the worst signing in La Liga following his move to Real Madrid, Modric continues to enhance his reputation as the one of the world\u2019s outstanding midfielders. Now able to stand up to a physical challenge, the Croatian truly excels in linking the lines of a team together. One of the great disappointments at Euro 2016 was that Modric\u2019s tournament ended so early.",
+    "rank": 11,
+    "team": "Real Madrid",
+      "firstname": "Luka",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Kroos",
+    "home": "Germany",
+    "info": "It should be one of the great frustrations to soccer fans that in a team filled with so many attacking talents a player of Kroos immense ability often has to consume himself with the ugly legwork at Real Madrid. As he showed at Euro 2016, when dictating Germany\u2019s play, he is one of the outstanding central playmakers in the game.",
+    "rank": 12,
+    "team": "Real Madrid",
+      "firstname": "Toni",
+      "isFavorite": false
+  },
+  {
+    "lastname": "S\u00e1nchez",
+    "home": "Chile",
+    "info": "While his second season at Arsenal was not as spectacular as his first, he more than made up for that with a sparkling Copa America Centenario. As well as three goals, his constant energy is perfect for Chile\u2019s high-pressing style and it earned him the award for the tournament\u2019s outstanding player. With Juventus interested in his signature, the challenge for Arsenal is to show that it can satisfy a player of such immense ability.",
+    "rank": 13,
+    "team": "Arsenal",
+      "firstname": "Alexis",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Bonucci",
+    "home": "Italy",
+    "info": "A key part of a Juventus defense that has won five successive Serie A titles, Bonucci may not have the same rugged physicality of partner Giorgio Chiellini, but he may just be the best ball-playing center-back in the world. At Euro 2016, with Andrea Pirlo and Marco Verratti absent, Bonucci took on the role of Italy\u2019s playmaker and performed it superbly. It is no surprise that Guardiola is so desperate to lure him to Manchester City and why Juventus will demand a huge fee to let him go.",
+    "rank": 14,
+    "team": "Juventus",
+      "firstname": "Leonardo",
+      "isFavorite": false
+  },
+  {
+    "lastname": "M\u00fcller",
+    "home": "Germany",
+    "info": "Long regarded for his expertise at finding space in the penalty box, M\u00fcller had his most prolific season yet last term, scoring 32 goals. While he endured a disappointing end to the campaign and failed to find the net at Euro 2016, a summer rest should see him back at his best under Carlo Ancelotti next season.",
+    "rank": 15,
+    "team": "Bayern Munich",
+      "firstname": "Thomas",
+      "isFavorite": false
+  },
+  {
+    "lastname": "de Bruyne",
+    "home": "Belgium",
+    "info": "Eyebrows were raised when Manchester City brought De Bruyne back to the Premier League last summer at a cost of 54 million pounds $71 million). Any doubts have now been removed. One of the world\u2019s premier counter-attacking players, it is no coincidence that City\u2019s slump occurred during De Bruyne\u2019s time out injured. Not always utilized effectively with Belgium, it will be fascinating to see how the 25-year develops next season under Pep Guardiola.",
+    "rank": 16,
+    "team": "Manchester City",
+      "firstname": "Kevin",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Lewandowski",
+    "home": "Poland",
+    "info": "Lewandowski\u2019s first season at Bayern Munich was hardly poor, but his second was spectacular. He plundered 42 goals in all competitions, including famously hitting five goals in nine minutes during a match last September. It was a major disappointment, then, that he failed to replicate that form at Euro 2016.",
+    "rank": 17,
+    "team": "Bayern Munich",
+      "firstname": "Robert",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Buffon",
+    "home": "Italy",
+    "info": "Can it be that at the age of 38, Buffon is still getting better? There is certainly no sign of the sort of decline that has struck the other most renowned goalkeeper of his generation, Iker Casillas. Last season he broke yet another record, going 973 minutes without conceding a goal in Serie A. There's no denying he's one of the all-time greatest goalkeepers.",
+    "rank": 18,
+    "team": "Juventus",
+      "firstname": "Gianluigi",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Vidal",
+    "home": "Chile",
+    "info": "A one-man force of nature in midfield, Vidal can seemingly be everywhere at once, adding physical force in the center of the pitch before driving forward and firing a shot at goal. He was again vital in helping Chile to its second title in two years at the Copa America Centenario. Worryingly, though, the 29-year-old\u2019s body has shown signs of faltering under the weight of his playing style and his extensive commitments for club and country.",
+    "rank": 19,
+    "team": "Bayern Munich",
+      "firstname": "Arturo",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Ag\u00fcero",
+    "home": "Argentina",
+    "info": "Despite continuing to be hampered by injury, Ag\u00fcero struck 24 Premier League goals last season to take his tally to 50 in the last two campaigns. While he didn\u2019t get much of a look in with Argentina at the Copa America, he remains one of the most lethal strikers around and should flourish under Guardiola.",
+    "rank": 20,
+    "team": "Manchester City",
+      "firstname": "Sergio",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Pique",
+    "home": "Spain",
+    "info": "He may get more attention these days for his marriage to Shakira and his habit of riling Real Madrid on social media, but Pique also remains an outstanding center-back. The decline of four or five years ago is now well behind him and he will be key to Barcelona\u2019s attempts to add a further haul of silverware over the next season.",
+    "rank": 21,
+    "team": "Barcelona",
+      "firstname": "Gerard",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Rakitic",
+    "home": "Croatia",
+    "info": "The Croatian had no easy task taking over in the Barcelona midfield from the legendary Xavi, but, while a very different kind of player, he has fit in seamlessly. Last season he excelled once again and prevented new signing Arda Turan from getting a look in.",
+    "rank": 22,
+    "team": "Barcelona",
+      "firstname": "Ivan",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Boateng",
+    "home": "Germany",
+    "info": "The improvement in Boateng\u2019s game in the last few seasons has been exceptional. Arguably not a natural defender, he has developed his decision-making considerably at center-back. And for both club and country, his ability to hit long diagonal balls out of the back it hugely important.",
+    "rank": 23,
+    "team": "Bayern Munich",
+      "firstname": "Jerome",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Rodr\u00edguez",
+    "home": "Colombia",
+    "info": "Having previously seen his career head in only one direction, following starring displays at the 2014 World Cup and a fine start to life at Real Madrid, James endured a hugely disappointing season last term. But he again showed in patches in the Copa America Centenario what a dazzling playmaker he can be when given the right setup.",
+    "rank": 24,
+    "team": "Real Madrid",
+      "firstname": "James",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Benzema",
+    "home": "France",
+    "info": "Without going into the unsavory and bizarre reason for his exclusion from the France squad, it was nonetheless disappointing not to see Benzema leading the line for the host at Euro 2016. He may never be fully appreciated at Real Madrid, but Benzema is a fabulously gifted and unselfish all-round forward who has been crucial to the success of Ronaldo. Last season was his most prolific yet, firing 24 goals in La Liga.",
+    "rank": 25,
+    "team": "Real Madrid",
+      "firstname": "Karim",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Aubameyang",
+    "home": "Gabon",
+    "info": "Having spent much of his first two seasons at Borussia Dortmund playing wide, Aubameyang was a sensation when given the responsibility of leading the attack under Thomas Tuchel last season. Blessed with searing pace, the 27-year-old, who started his career at Milan, also displayed a clinical touch in front of goal, finding the net 39 times in all competitions.",
+    "rank": 26,
+    "team": "Borussia Dortmund",
+      "firstname": "Pierre-Emerick",
+      "isFavorite": false
+  },
+  {
+    "lastname": "God\u00edn",
+    "home": "Uruguay",
+    "info": "He may not be as eye-catching on the ball as many of the other center-backs on this list, but in terms of a pure defender there remains nobody better in the world than the rugged God\u00edn. The 30-year-old was exceptional as Atl\u00e9tico Madrid reached its second Champions League final in three seasons.",
+    "rank": 27,
+    "team": "Atl\u00e9tico Madrid",
+      "firstname": "Diego",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Reus",
+    "home": "Germany",
+    "info": "Would Germany have gotten past France and added the European Championship to World Cup glory had Reus been fit? It is a question worth asking given he remains one of Europe\u2019s finest attacking midfielders. Thankfully, he could now be fit for the start of the Bundesliga season.",
+    "rank": 28,
+    "team": "Borussia Dortmund",
+      "firstname": "Marco",
+      "isFavorite": false
+  },
+  {
+    "lastname": "de Gea",
+    "home": "Spain",
+    "info": "After the absurdity of his failed transfer to Real Madrid last summer, De Gea knuckled down and put in another exceptional season with Manchester United, winning the club\u2019s Player of the Year award for a third successive campaign. Although he didn\u2019t perform at his best at Euro 2016, he is capable of making saves that are beyond perhaps every other goalkeeper in the world.",
+    "rank": 29,
+    "team": "Manchester United",
+      "firstname": "David",
+      "isFavorite": false
+  },
+  {
+    "lastname": "\u00d6zil",
+    "home": "Germany",
+    "info": "After struggling to adapt to the physicality of the Premier League in his first two years, the former Real Madrid playmaker had his most productive season yet at Arsenal. As well as contributing 19 assists, he broke the Premier League record for chances created. That his numbers dipped markedly in the second half of the season, though, just reinforces that he needs to more consistently bring his immense ability to the fore.",
+    "rank": 30,
+    "team": "Arsenal",
+      "firstname": "Mesut",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Lahm",
+    "home": "Germany",
+    "info": "For the most part reverting back to his original position last season, Lahm demonstrated that he remains one of the world\u2019s premier full-backs. An always reliable defender, the 32-year-old also has the ability to move forward into midfield, either wide or central. A fantastically all-round footballer.",
+    "rank": 31,
+    "team": "Bayern Munich",
+      "firstname": "Philipp",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Hummels",
+    "home": "Germany",
+    "info": "Hummel\u2019s presence was certainly missed as Germany lost to France in the Euro 2016 semifinals, and it will be sorely missed, too, at Borussia Dortmund next season after he became the latest player to tread the well-worn path to Bayern Munich. While not blessed with pace and prone to the occasional mistake, he is a superb leader at the back as well as being excellent on the ball.",
+    "rank": 32,
+    "team": "Bayern Munich",
+      "firstname": "Mats",
+      "isFavorite": false
+  },
+  {
+    "lastname": "di Mar\u00eda",
+    "home": "Argentina",
+    "info": "When Manchester United decided to sell the Argentine after one disappointing season at Old Trafford, it always seemed likely that it would be the club rather than the player who would be left with the bigger regret. That has been borne out as, while United struggled for the kind of flair and thrust the former Real Madrid man can produce, Di Mar\u00eda went onto score 15 goals and provide 25 assists in his first season with French champions PSG.",
+    "rank": 33,
+    "team": "Paris Saint-Germain",
+      "firstname": "\u00c1ngel",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Silva",
+    "home": "Spain",
+    "info": "While others may often get more attention, it is Silva who has long been key to making Manchester City click. One of the best players in the world to watch with the ball at his feet, Silva appears has an almost mesmeric control and so often concludes with a pass of breathtaking quality, as was the case for Spain\u2019s goal against Croatia at Euro 2016. He could thrive even more under Guardiola\u2019s guidance.",
+    "rank": 34,
+    "team": "Manchester City",
+      "firstname": "David",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Hazard",
+    "home": "Belgium",
+    "info": "The outstanding player in the Premier League two seasons ago, Hazard looked poised to be one of the world\u2019s true leading lights right behind Messi and Ronaldo. However last season, when he failed to score a league goal until April, was a huge disappointment. While that raised questions about his character, his immense dribbling ability remains and he has a chance to get his career back on track under Antonio Conte.",
+    "rank": 35,
+    "team": "Chelsea",
+      "firstname": "Eden",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Alves",
+    "home": "Brazil",
+    "info": "He may now be 33, but Barcelona could still regret letting Alves leave to Juventus this summer. Certainly his contribution to the club\u2019s incredible success over the past eight years should not be overlooked. Perhaps the finest right-back in history, yet so much more than a right-back.",
+    "rank": 36,
+    "team": "Juventus",
+      "firstname": "Dani",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Alaba",
+    "home": "Austria",
+    "info": "The central figure for Austria operating in a midfield role, Alaba helped his country go unbeaten through Euro 2016 qualifying before massively disappointing in France. But there is little doubt that the failure to perform at Euro 2016 will be just a temporary setback for a player who showed his versatility again last season by often lining up in the center of defense last season.",
+    "rank": 37,
+    "team": "Bayern Munich",
+      "firstname": "David",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Mascherano",
+    "home": "Argentina",
+    "info": "Despite performing as a very good center-back for six years at Barcelona, Mascherano remains a defensive midfielder at heart. And he is among the very best in the world in that position, something he demonstrates with Argentina. Having looked set to move to Juventus to switch back to a midfield role, the 32-year-old is now preparing for another campaign at the Camp Nou.",
+    "rank": 38,
+    "team": "Barcelona",
+      "firstname": "Javier",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Verratti",
+    "home": "Italy",
+    "info": "A midfielder who made the move to French giants PSG when still a teenager, Verratti, now 23, just continues to get better. Now, as well as his sublime passing skills that earned him obvious comparisons to compatriot Andrea Pirlo, he is capable of holding his own in a tight, physical midfield battle. Injury meant his presence was sorely missed not just by PSG as it crashed out of the Champions League but by Italy at Euro 2016.",
+    "rank": 39,
+    "team": "Paris Saint-Germain",
+      "firstname": "Marco",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Ibrahimovic",
+    "home": "Sweden",
+    "info": "He may be 34 and have bowed out from international soccer after Euro 2016, but Ibrahimovic is coming off his most prolific season ever, firing 50 goals for Paris Saint-Germain. Never reliant on pace and blessed with a range of attributes never before seen in a top striker, it would be foolish to write off the Swede\u2019s chances of making a delayed impression in the Premier League with Manchester United. And he just may even continue his remarkable record of winning a league title with every one of his clubs.",
+    "rank": 40,
+    "team": "Manchester United",
+      "firstname": "Zlatan",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Higuain",
+    "home": "Argentina",
+    "info": "The defenses may not be quite as stingy as they once were in Serie A, but Higua\u00edn\u2019s  achievement of breaking Gunnar Nordahl\u2019s 66-year-old scoring record with 36 goals last season is a remarkable achievement. The only thing that counts against his claim to be one of the world\u2019s truly great strikers is his habit for fluffing chances on the big occasion, a trend he continued with a costly miss in the final of the Copa America Centenario.",
+    "rank": 41,
+    "team": "Napoli",
+      "firstname": "Gonzalo",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Robben",
+    "home": "Netherlands",
+    "info": "Having started just 14 Bundesliga games and only three in the Champions League, last season was close to a write off for the Dutch winger. At the age of 32, it remains to be seen whether he can approach his brilliant best upon returning. But, now fully fit and having made an early start to preseason, the former Chelsea and Real Madrid man, who previously appeared to be only getting better with age, could be set to show he has plenty more left in the tank.",
+    "rank": 42,
+    "team": "Bayern Munich",
+      "firstname": "Arjen",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Mkhitaryan",
+    "home": "Armenia",
+    "info": "After his first two seasons at Borussia Dortmund were highlighted by costly misses in front of goal, Mkhitaryan flourished in his third, finding the net 23 times and contributing 32 assists. That form earned him a move to Manchester United, where he is set to play a key role in Jose Mourinho\u2019s new-look side.",
+    "rank": 43,
+    "team": "Manchester United",
+      "firstname": "Henrikh",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Ramos",
+    "home": "Spain",
+    "info": "He is often far from the most composed defender around, as shown by his remarkable record of picking up 21 red cards during his career. However, Ramos is a supreme athlete and an inspirational leader. The 30-year-old also has a habit of delivering a goal on the big occasion, a trend he continued by netting in last season\u2019s Champions League final.",
+    "rank": 44,
+    "team": "Real Madrid",
+      "firstname": "Sergio",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Koke",
+    "home": "Spain",
+    "info": "Perhaps Spain\u2019s Euro 2016 campaign would have been different had Del Bosque bought more new faces into the fold, particularly Koke. The all-round midfielder, who laid on 14 assists in La Liga last season, has been a key part of Atl\u00e9tico\u2019s immense success in recent seasons, and should now get the international recognition he deserves with a new coach.",
+    "rank": 45,
+    "team": "Atl\u00e9tico Madrid",
+      "firstname": "",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Marcelo",
+    "home": "Brazil",
+    "info": "His relentlessly attacking instincts have sometimes proved his undoing, most spectacularly in Brazil\u2019s infamous 7-1 defeat to Germany, but he is one of the very rare full-backs who can also act as a playmaker for his team. When Real Madrid\u2019s attacking stars are struggling, so often Marcelo is the one to provide a spark.",
+    "rank": 46,
+    "team": "Real Madrid",
+      "firstname": "",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Lloris",
+    "home": "France",
+    "info": "It was cruel, indeed, that Lloris will have to share part of the blame for France\u2019s painful Euro 2016 final defeat after his failure to get down to stop Eder\u2019s winner for Portugal. But France may well not have even been in the final were it not for its goalkeeper, after he made some exceptional saves against Germany in the last four. Not just a fine shot-stopper, Lloris is exemplary at reading danger and coming out of his goal.",
+    "rank": 47,
+    "team": "Tottenham",
+      "firstname": "Hugo",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Krychowiak",
+    "home": "Poland",
+    "info": "The defensive midfielder was an essential and often unheralded part of the Sevilla team that won Europa League titles in the last two seasons. And he again showed his screening ability in front of the back four at Euro 2016, where his Poland side conceded just once in four matches. It was no surprise that PSG spent big to add him to its squad this summer.",
+    "rank": 48,
+    "team": "Paris Saint-Germain",
+      "firstname": "Grzegorz",
+      "isFavorite": false
+  },
+  {
+    "lastname": "Dybala",
+    "home": "Argentina",
+    "info": "Particularly following a dreadful start to the season, it appeared that the loss of key players like Carlos Tevez and Arturo Vidal would cost Juventus a fifth straight Serie A title. But that assessment failed to count upon the enormous talent possessed by one of the club\u2019s new arrivals. Dybala hit the ground running after arriving from Palermo, scoring 19 goals and providing nine assists to play a major part in the Turin side's extraordinary run to the title.",
+    "rank": 49,
+    "team": "Juventus",
+      "firstname": "Paulo",
+      "isFavorite": false
+  },
+  {
+    "lastname": "G\u00fcndogan",
+    "home": "Germany",
+    "info": "After a back problem kept him out of the 2014 World Cup, injury cruelly cost G\u00fcndogan a place at another major tournament this summer. But it says something about his ability as a deep-lying playmaker that Pep Guardiola had no qualms about making the 25-year-old his first signing upon taking over at Manchester City.",
+    "rank": 50,
+    "team": "Manchester City",
+      "firstname": "Ilkay",
+      "isFavorite": false
+  }
+]

@@ -15,7 +15,7 @@ struct Do_It_NowApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TaskListView()
                 .environmentObject(tasks)
         }.onChange(of: scenePhase) { (phase) in
             switch phase {

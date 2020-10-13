@@ -23,7 +23,6 @@ class StorageModel {
         destinationURL =  documentURL.appendingPathComponent(filename + ".json")
         
         let fileExists = fileManager.fileExists(atPath: destinationURL.path)
-        
         let url =  fileExists ? destinationURL : playerURL
 
             let decoder = JSONDecoder()
@@ -35,24 +34,11 @@ class StorageModel {
                 footballers = []
             }
         
-        
         //compute teams
         var _teams = [Team]()
-        for p in footballers {
-            if let teamIndex = _teams.firstIndex(where: { (team) -> Bool in
-                team.name == p.teamname
-            }) {
-                _teams[teamIndex].addPlayer(p)
-            } else {
-                let newTeam = Team(name: p.teamname)
-                newTeam.addPlayer(p)
-                _teams.append(newTeam)
-            }
-        }
+        /* TODO: Compute array of Teams */
         teams = _teams
-
     }
-    
     
     //MARK: - Saving Data
     func saveData() {

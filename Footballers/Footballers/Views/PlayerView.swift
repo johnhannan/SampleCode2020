@@ -13,7 +13,9 @@ struct PlayerView: View {
     var body: some View {
         ScrollView {
             Text(player.info)
+                .padding()
         }
+        .navigationTitle(Text(player.fullname))
     }
 }
 

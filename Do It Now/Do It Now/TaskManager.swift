@@ -29,7 +29,7 @@ struct TaskManager {
                 items = []
             }
         } else {
-            items = []
+            items = ["Walk my dog", "Have a snack", "Prepare for class", "Take a nap"]
         }
         
     }

@@ -9,13 +9,22 @@ import SwiftUI
 
 struct PlayerView: View {
     @Binding var player : Player
+    @Environment(\.editMode) var editMode
     
     var body: some View {
         ScrollView {
-            Text(player.info)
-                .padding()
+            //Text(player.info)
+            TextEditor(text: $player.info)
+            .padding()
+                .disabled(self.editMode?.wrappedValue == .inactive)
         }
         .navigationTitle(Text(player.fullname))
+        .navigationBarBackButtonHidden(editMode?.wrappedValue.isEditing ?? false)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                EditButton()
+            }
+        }
     }
 }
 

@@ -35,10 +35,13 @@ struct DownTownView: View {
                         Spacer()
                     }
                     
-}
+                }
             }
             
-        }.environmentObject(locationsManager)
+            
+        }
+        .navigationViewStyle(StackNavigationViewStyle()) 
+        .environmentObject(locationsManager)
     }
     
     var placesHeight : CGFloat = 70.0

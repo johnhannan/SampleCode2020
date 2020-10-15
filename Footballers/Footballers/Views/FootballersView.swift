@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FootballersView: View {
     @EnvironmentObject var playersModel : PlayersModel
+    @State var showingAddPlayer : Bool = false
     
     var body: some View {
         List {
@@ -20,7 +21,12 @@ struct FootballersView: View {
         } .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) { Text("Footballers")}
-            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {showingAddPlayer.toggle()}) {Image(systemName: "plus")}}
+        }
+        .sheet(isPresented: $showingAddPlayer) {
+            AddPlayersView(playersModel:playersModel, showingAddPlayer: $showingAddPlayer)
+        }
     }
 }
 

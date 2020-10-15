@@ -20,6 +20,7 @@
 		3B07A9E725336BC200129A7B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07A9E625336BC100129A7B /* HomeView.swift */; };
 		3B07A9EA25336BE000129A7B /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07A9E925336BE000129A7B /* TeamView.swift */; };
 		3B07A9ED25336C7800129A7B /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07A9EC25336C7800129A7B /* PlayerView.swift */; };
+		3BD2B48E25387CEE003806A5 /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2B48D25387CEE003806A5 /* AddPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3B07A9E625336BC100129A7B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3B07A9E925336BE000129A7B /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		3B07A9EC25336C7800129A7B /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		3BD2B48D25387CEE003806A5 /* AddPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				3B07A9E625336BC100129A7B /* HomeView.swift */,
 				3B07A9E925336BE000129A7B /* TeamView.swift */,
 				3B07A9E225336B5D00129A7B /* FootballersView.swift */,
+				3BD2B48D25387CEE003806A5 /* AddPlayerView.swift */,
 				3B07A9EC25336C7800129A7B /* PlayerView.swift */,
 			);
 			path = Views;
@@ -186,6 +189,7 @@
 				3B07A9D7253368D500129A7B /* StorageModel.swift in Sources */,
 				3B07A9E325336B5D00129A7B /* FootballersView.swift in Sources */,
 				3B07A9ED25336C7800129A7B /* PlayerView.swift in Sources */,
+				3BD2B48E25387CEE003806A5 /* AddPlayerView.swift in Sources */,
 				3B07A9C52533687D00129A7B /* ContentView.swift in Sources */,
 				3B07A9DB253368F300129A7B /* PlayersModel.swift in Sources */,
 				3B07A9E725336BC200129A7B /* HomeView.swift in Sources */,

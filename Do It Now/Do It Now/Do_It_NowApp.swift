@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Do_It_NowApp: App {
-    let tasks = Tasks()
+    @StateObject var tasks = Tasks()
     
     @Environment(\.scenePhase) private var scenePhase
     

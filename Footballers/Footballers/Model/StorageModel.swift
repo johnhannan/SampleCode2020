@@ -36,7 +36,17 @@ class StorageModel {
         
         //compute teams
         var _teams = [Team]()
-        /* TODO: Compute array of Teams */
+        for player in footballers {
+            if let teamIndex = _teams.firstIndex(where: { (team) -> Bool in
+                team.name == player.teamname
+            }) {
+                _teams[teamIndex].addPlayer(player)
+            } else {
+                let newTeam = Team(name: player.teamname)
+                newTeam.addPlayer(player)
+                _teams.append(newTeam)
+            }
+        }
         teams = _teams
     }
     

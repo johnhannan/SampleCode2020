@@ -25,6 +25,9 @@ class PlayersModel : ObservableObject {
     }
     
 
+    func addPlayer(player:Player) {
+        footballers.append(player)
+    }
     
     //MARK: - Saving Data
     func saveData() {

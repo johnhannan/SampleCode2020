@@ -9,62 +9,82 @@ import SwiftUI
 
 struct TaskListView: View {
     @EnvironmentObject var tasks : Tasks
-    @Environment(\.editMode) var mode
     
-    @State var editMode = EditMode.inactive
+    //@Environment(\.editMode) var mode
+    //@State var editMode = EditMode.inactive
+    
     @State private var addTextItem : String = ""
     @State private var isAdding = false
     
     @State private var selectedItems = IndexSet()
-    @State private var editing = false
+    @State private var isEditing = false
     
     var body: some View {
         NavigationView {
-            let myEditButton: Button<Text> = Button(editing ? "Done" : "Edit", action: {editing.toggle()})
+            
             
             List {
                 ForEach(tasks.items.indices, id:\.self) {index in
-                    RowItem(item: tasks.items[index], index: index, editing: editing, selectedItems: $selectedItems)                }
-//                .onDelete { indexSet in
-//                    tasks.deleteItems(indexSet: indexSet)
-//                }
-                .onMove { (indexSet, index) in
-                    tasks.moveItems(offsets: indexSet, to: index)
-                }
+                    RowItem(item: tasks.items[index], index: index, editing: isEditing, selectedItems: $selectedItems)                }
+                    //                .onDelete { indexSet in
+                    //                    tasks.deleteItems(indexSet: indexSet)
+                    //                }
+                    //.onMove { (indexSet, index) in
+                    //    tasks.moveItems(offsets: indexSet, to: index)
+                    //}
                 
-//                if editMode.isEditing {
-//                    TextField("Add", text: $addTextItem, onEditingChanged: { _ in })
-//                        {
-//                        tasks.addItem(item: addTextItem)
-//                        addTextItem = ""
-//                        editMode = .inactive
-//                    }.textFieldStyle(RoundedBorderTextFieldStyle()
-//                    )
-//
-//                }
-
+                if isAdding {
+                    TextField("Add", text: $addTextItem, onEditingChanged: { _ in })
+                    {
+                        tasks.addItem(item: addTextItem)
+                        addTextItem = ""
+                        isAdding = false
+                    }
+                    .textFieldStyle(RoundedBorderTextFieldStyle() )
+                }
             }
-           
             .navigationTitle(Text("Things To Do"))
-            .navigationBarItems(leading: addButton,
-                                trailing: myEditButton)
-            
-            .environment(\.editMode, $editMode)
-            
-        }.sheet(isPresented: $isAdding) {
-            TextField("Add", text: $addTextItem, onEditingChanged: {_ in}) {
-                tasks.addItem(item: addTextItem)
-                addTextItem = ""
-                isAdding = false
+            .navigationBarItems(leading: addButton.disabled(isEditing),
+                                trailing: editButton.disabled(isAdding))
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Button(action: {tasks.deleteItems(indexSet: selectedItems)
+                        isEditing = false
+                        selectedItems.removeAll()
+                        
+                    }) {Image(systemName: "trash")}
+                    .disabled(selectedItems.isEmpty)
+                }
             }
+            // this environment view modifier must come after adding the EditButton to the view
+            //.environment(\.editMode, $editMode)
+            
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        
+        //        .sheet(isPresented: $isAdding) {
+        //            TextField("Add", text: $addTextItem, onEditingChanged: {_ in}) {
+        //                tasks.addItem(item: addTextItem)
+        //                addTextItem = ""
+        //                isAdding = false
+        //            }
+        //        }
+        
+        
     }
     
     private var addButton : some View {
-        Button(action: {isAdding = true})
-            { Image(systemName: "plus") }}
+        Button(action: {withAnimation{isAdding.toggle()}})
+            { Image(systemName: "plus") }
+    }
+    private var editButton : some View {
+        Button(action: {withAnimation{isEditing.toggle()}
+            selectedItems.removeAll()
+        })
+            { Text(isEditing ? "Done" : "Edit") }
+    }
     
-
+    
 }
 
 struct RowItem : View {
@@ -76,13 +96,25 @@ struct RowItem : View {
     var body : some View {
         HStack {
             if editing {
-                Button(action: {toggle(selectedItems: $selectedItems, for: index)}, label: {Image(systemName: imageNameFor(index: index))})
+                SelectButton(index: index, selectedItems: $selectedItems)
             }
-        Text(item)
+            Text(item)
         }
+        .listRowBackground(selectedItems.contains(index) ? Color.lightergray : Color.clear)
     }
     
-    func toggle(selectedItems : Binding<IndexSet>, for index: Int) {
+    
+}
+
+struct SelectButton : View {
+    var index : Int
+    @Binding var selectedItems : IndexSet
+    var body : some View {
+        Button(action: {toggle(index, in: $selectedItems)},
+               label: {imageFor(index, in: selectedItems) })
+    }
+    
+    func toggle(_ index: Int, in selectedItems : Binding<IndexSet>) {
         if selectedItems.wrappedValue.contains(index) {
             selectedItems.wrappedValue.remove(index)
         } else {
@@ -90,12 +122,14 @@ struct RowItem : View {
         }
     }
     
-    func imageNameFor(index:Int) -> String {
-        selectedItems.contains(index) ? "circle.fill" : "circle"
+    func imageFor(_ index:Int, in selectedItems:IndexSet) -> some View {
+        let isSelected = selectedItems.contains(index)
+        return  Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+            .renderingMode(.template)
+            .foregroundColor(isSelected ? .blue : .gray)
     }
+
 }
-
-
 
 struct TaskListView_Previews: PreviewProvider {
     static var previews: some View {

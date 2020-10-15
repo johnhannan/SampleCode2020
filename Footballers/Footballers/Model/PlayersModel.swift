@@ -29,6 +29,19 @@ class PlayersModel : ObservableObject {
         footballers.append(player)
     }
     
+    //MARK: filtering
+    func playerIndicesFilteredBy(searchText:String) -> [Int] {
+        let filteredPlayers = footballers.filter({$0.lastname.hasPrefix(searchText)})
+        let indices = filteredPlayers.map {fp in footballers.firstIndex(where: {$0.fullname == fp.fullname})!}
+        return indices
+    }
+    func playerIndicesFor(players:[Player]) -> [Int] {
+        let indices = players.map {fp in footballers.firstIndex(where: {$0.fullname == fp.fullname})!}
+        return indices
+    }
+    
+    
+    
     //MARK: - Saving Data
     func saveData() {
         storageModel.saveData()

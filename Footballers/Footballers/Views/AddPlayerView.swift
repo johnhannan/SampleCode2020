@@ -42,13 +42,14 @@ struct AddPlayersView: View {
                         playersModel.addPlayer(player: player)
                         showingAddPlayer.toggle()
                     }
-                    .disabled(false)
+                    .disabled(!isValid)
                 }
             }
         }
     }
     
-
+    private var isValid : Bool {[firstname,lastname,teamname,country].allSatisfy{!$0.isEmpty}}
+    
 }
 
 //struct AddPlayersView_Previews: PreviewProvider {

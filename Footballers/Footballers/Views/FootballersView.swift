@@ -10,9 +10,13 @@ import SwiftUI
 struct FootballersView: View {
     @EnvironmentObject var playersModel : PlayersModel
     @State var showingAddPlayer : Bool = false
+    @State private var searchText = ""
+    
     
     var body: some View {
         List {
+            SearchBar(searchText: $searchText)
+            
             ForEach(playersModel.footballers.indices, id:\.self) {index in
                 NavigationLink(destination: PlayerView(player: $playersModel.footballers[index])) {
                     PlayerRowView(player: playersModel.footballers[index])

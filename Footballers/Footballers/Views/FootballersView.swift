@@ -14,22 +14,30 @@ struct FootballersView: View {
     
     
     var body: some View {
-        List {
-            SearchBar(searchText: $searchText)
+        
+        // use a reader so we can scroll to first player, hiding the search bar above it
+        ScrollViewReader { proxy in
             
-            ForEach(playersModel.footballers.indices, id:\.self) {index in
-                NavigationLink(destination: PlayerView(player: $playersModel.footballers[index])) {
-                    PlayerRowView(player: playersModel.footballers[index])
+            List {
+                SearchBar(searchText: $searchText)
+                
+                ForEach(playersModel.playerIndicesFilteredBy(searchText: searchText), id:\.self) {index in
+                    NavigationLink(destination: PlayerView(player: $playersModel.footballers[index])) {
+                        PlayerRowView(player: playersModel.footballers[index])
+                    }.id(index)
                 }
+            } .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) { Text("Footballers")}
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {showingAddPlayer.toggle()}) {Image(systemName: "plus")}}
             }
-        } .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) { Text("Footballers")}
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {showingAddPlayer.toggle()}) {Image(systemName: "plus")}}
-        }
-        .sheet(isPresented: $showingAddPlayer) {
-            AddPlayersView(playersModel:playersModel, showingAddPlayer: $showingAddPlayer)
+            .sheet(isPresented: $showingAddPlayer) {
+                AddPlayersView(playersModel:playersModel, showingAddPlayer: $showingAddPlayer)
+            }
+            .onAppear() {
+                proxy.scrollTo(0, anchor: .top)  // hides the search bar
+            }
         }
     }
 }

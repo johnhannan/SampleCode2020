@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SearchBar: View {
     @Binding var searchText : String
-    @State private var showCancelButton: Bool = false
-    
+    @State private var showCancelButton: Bool = true
+    @State private var disableKeyboard = false
+    @State private var disableButton = false
     
     var body: some View {
         HStack {
@@ -18,6 +19,7 @@ struct SearchBar: View {
                 TextField(" Search", text: $searchText, onEditingChanged: { _ in
                     self.showCancelButton = true
                 })
+                
                 
                 Button(action: {
                     self.searchText = ""
@@ -31,9 +33,10 @@ struct SearchBar: View {
             
             if !searchText.isEmpty  {
                 Button("Cancel") {
-                    
+                    self.disableKeyboard = true
+                    self.disableButton = false
                     self.searchText = ""
-                    self.showCancelButton = false
+                    //self.showCancelButton = false
                 }
                 .foregroundColor(Color(.systemBlue))
             }

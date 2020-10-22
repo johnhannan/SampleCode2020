@@ -9,18 +9,22 @@ import SwiftUI
 
 @main
 struct FootballersApp: App {
-    let playerModel = PlayersModel()
+    let playersModel = PlayersModel()
+    let persistenceController = PersistenceController.shared
+    
     
     @Environment(\.scenePhase) private var scenePhase
     var body: some Scene {
         WindowGroup {
             HomeView()
-                .environmentObject(playerModel)
+                .environmentObject(playersModel)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         .onChange(of: scenePhase) {phase in
             switch phase {
             case .inactive:
-                playerModel.saveData()
+                playersModel.saveData()
+                try? persistenceController.container.viewContext.save()
             default:
                 break
             }

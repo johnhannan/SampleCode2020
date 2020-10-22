@@ -1,14 +1,15 @@
 //
-//  FootballersView.swift
+//  FootballersMOView.swift
 //  Footballers
 //
-//  Created by jjh9 on 10/11/20.
+//  Created by jjh9 on 10/22/20.
 //
 
 import SwiftUI
 
-struct FootballersView: View {
-    @EnvironmentObject var playersModel : PlayersModel
+struct FootballersMOView: View {
+    var players: FetchedResults<PlayerMO>
+    @Environment(\.managedObjectContext) private var viewContext
     @State var showingAddPlayer : Bool = false
     @State private var searchText = ""
     
@@ -21,19 +22,22 @@ struct FootballersView: View {
             List {
                 SearchBar(searchText: $searchText)
                 
-                ForEach(playersModel.playerIndicesFilteredBy(searchText: searchText), id:\.self) {index in
-                    NavigationLink(destination: PlayerView(player: $playersModel.footballers[index])) {
-                        PlayerRowView(player: playersModel.footballers[index])
+                ForEach(players.indices, id:\.self) {index in
+                    NavigationLink(destination: PlayerMOView(player: players[index]))
+                    {
+                        PlayerMORowView(player:  players[index])
                     }.id(index)  // only row that needs this is row 0
                 }
-            } .navigationBarTitleDisplayMode(.inline)
+            }
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) { Text("Footballers")}
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {showingAddPlayer.toggle()}) {Image(systemName: "plus")}}
             }
             .sheet(isPresented: $showingAddPlayer) {
-                AddPlayersView(playersModel:playersModel, showingAddPlayer: $showingAddPlayer)
+                AddPlayerMOView(showingAddPlayer: $showingAddPlayer)
+                    .environment(\.managedObjectContext, viewContext)
             }
             .onAppear() {
                 proxy.scrollTo(0, anchor: .top)  // hides the search bar
@@ -42,17 +46,15 @@ struct FootballersView: View {
     }
 }
 
-
-struct PlayerRowView : View {
-    let player : Player
+struct PlayerMORowView : View {
+    let player : PlayerMO
     var body: some View {
         Text(player.fullname)
     }
 }
 
-
-struct FootballersView_Previews: PreviewProvider {
-    static var previews: some View {
-        FootballersView()
-    }
-}
+//struct FootballersMOView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FootballersMOView()
+//    }
+//}

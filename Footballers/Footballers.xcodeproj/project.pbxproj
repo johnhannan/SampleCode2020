@@ -20,6 +20,16 @@
 		3B07A9E725336BC200129A7B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07A9E625336BC100129A7B /* HomeView.swift */; };
 		3B07A9EA25336BE000129A7B /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07A9E925336BE000129A7B /* TeamView.swift */; };
 		3B07A9ED25336C7800129A7B /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07A9EC25336C7800129A7B /* PlayerView.swift */; };
+		3B3D156C2541AACF006C1DEB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D156B2541AACF006C1DEB /* Persistence.swift */; };
+		3B3D15712541ACED006C1DEB /* FootballersMOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D15702541ACED006C1DEB /* FootballersMOView.swift */; };
+		3B3D15742541AD3C006C1DEB /* TeamMOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D15732541AD3C006C1DEB /* TeamMOView.swift */; };
+		3B3D15772541AD76006C1DEB /* AddPlayerMOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D15762541AD76006C1DEB /* AddPlayerMOView.swift */; };
+		3B3D157A2541ADA3006C1DEB /* PlayerMOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D15792541ADA3006C1DEB /* PlayerMOView.swift */; };
+		3B3D15852541EF5D006C1DEB /* Footballers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D15832541EF5D006C1DEB /* Footballers.xcdatamodeld */; };
+		3B3D158B2541F296006C1DEB /* PlayerMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D15872541F296006C1DEB /* PlayerMO+CoreDataClass.swift */; };
+		3B3D158C2541F296006C1DEB /* PlayerMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D15882541F296006C1DEB /* PlayerMO+CoreDataProperties.swift */; };
+		3B3D158D2541F296006C1DEB /* TeamMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D15892541F296006C1DEB /* TeamMO+CoreDataClass.swift */; };
+		3B3D158E2541F296006C1DEB /* TeamMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D158A2541F296006C1DEB /* TeamMO+CoreDataProperties.swift */; };
 		3BD2B48E25387CEE003806A5 /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2B48D25387CEE003806A5 /* AddPlayerView.swift */; };
 		3BD2B4952538C12A003806A5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2B4942538C12A003806A5 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +50,16 @@
 		3B07A9E625336BC100129A7B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3B07A9E925336BE000129A7B /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		3B07A9EC25336C7800129A7B /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		3B3D156B2541AACF006C1DEB /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3B3D15702541ACED006C1DEB /* FootballersMOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballersMOView.swift; sourceTree = "<group>"; };
+		3B3D15732541AD3C006C1DEB /* TeamMOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMOView.swift; sourceTree = "<group>"; };
+		3B3D15762541AD76006C1DEB /* AddPlayerMOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerMOView.swift; sourceTree = "<group>"; };
+		3B3D15792541ADA3006C1DEB /* PlayerMOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMOView.swift; sourceTree = "<group>"; };
+		3B3D15842541EF5D006C1DEB /* Footballers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Footballers.xcdatamodel; sourceTree = "<group>"; };
+		3B3D15872541F296006C1DEB /* PlayerMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3B3D15882541F296006C1DEB /* PlayerMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3B3D15892541F296006C1DEB /* TeamMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3B3D158A2541F296006C1DEB /* TeamMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3BD2B48D25387CEE003806A5 /* AddPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
 		3BD2B4942538C12A003806A5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +94,7 @@
 		3B07A9C12533687D00129A7B /* Footballers */ = {
 			isa = PBXGroup;
 			children = (
+				3B3D156A2541AA9C006C1DEB /* Core Data */,
 				3B07A9E125336B3C00129A7B /* Views */,
 				3B07A9D2253368B700129A7B /* Model */,
 				3B07A9C22533687D00129A7B /* FootballersApp.swift */,
@@ -109,13 +130,30 @@
 			isa = PBXGroup;
 			children = (
 				3B07A9E625336BC100129A7B /* HomeView.swift */,
+				3B3D15702541ACED006C1DEB /* FootballersMOView.swift */,
+				3B3D15732541AD3C006C1DEB /* TeamMOView.swift */,
 				3B07A9E925336BE000129A7B /* TeamView.swift */,
 				3B07A9E225336B5D00129A7B /* FootballersView.swift */,
 				3BD2B48D25387CEE003806A5 /* AddPlayerView.swift */,
+				3B3D15762541AD76006C1DEB /* AddPlayerMOView.swift */,
 				3BD2B4942538C12A003806A5 /* SearchBar.swift */,
 				3B07A9EC25336C7800129A7B /* PlayerView.swift */,
+				3B3D15792541ADA3006C1DEB /* PlayerMOView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3B3D156A2541AA9C006C1DEB /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B3D15872541F296006C1DEB /* PlayerMO+CoreDataClass.swift */,
+				3B3D15882541F296006C1DEB /* PlayerMO+CoreDataProperties.swift */,
+				3B3D15892541F296006C1DEB /* TeamMO+CoreDataClass.swift */,
+				3B3D158A2541F296006C1DEB /* TeamMO+CoreDataProperties.swift */,
+				3B3D156B2541AACF006C1DEB /* Persistence.swift */,
+				3B3D15832541EF5D006C1DEB /* Footballers.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,16 +226,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3D157A2541ADA3006C1DEB /* PlayerMOView.swift in Sources */,
+				3B3D15712541ACED006C1DEB /* FootballersMOView.swift in Sources */,
 				3B07A9DF2533690600129A7B /* Team.swift in Sources */,
 				3B07A9D7253368D500129A7B /* StorageModel.swift in Sources */,
 				3B07A9E325336B5D00129A7B /* FootballersView.swift in Sources */,
 				3B07A9ED25336C7800129A7B /* PlayerView.swift in Sources */,
 				3BD2B48E25387CEE003806A5 /* AddPlayerView.swift in Sources */,
 				3BD2B4952538C12A003806A5 /* SearchBar.swift in Sources */,
+				3B3D158C2541F296006C1DEB /* PlayerMO+CoreDataProperties.swift in Sources */,
 				3B07A9C52533687D00129A7B /* ContentView.swift in Sources */,
+				3B3D156C2541AACF006C1DEB /* Persistence.swift in Sources */,
+				3B3D15742541AD3C006C1DEB /* TeamMOView.swift in Sources */,
 				3B07A9DB253368F300129A7B /* PlayersModel.swift in Sources */,
 				3B07A9E725336BC200129A7B /* HomeView.swift in Sources */,
+				3B3D158E2541F296006C1DEB /* TeamMO+CoreDataProperties.swift in Sources */,
 				3B07A9DC253368F300129A7B /* Player.swift in Sources */,
+				3B3D15772541AD76006C1DEB /* AddPlayerMOView.swift in Sources */,
+				3B3D158D2541F296006C1DEB /* TeamMO+CoreDataClass.swift in Sources */,
+				3B3D15852541EF5D006C1DEB /* Footballers.xcdatamodeld in Sources */,
+				3B3D158B2541F296006C1DEB /* PlayerMO+CoreDataClass.swift in Sources */,
 				3B07A9C32533687D00129A7B /* FootballersApp.swift in Sources */,
 				3B07A9EA25336BE000129A7B /* TeamView.swift in Sources */,
 			);
@@ -337,7 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.cse.hannan.Footballers;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.cse.hannan.Footballers20;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.cse.hannan.Footballers;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.cse.hannan.Footballers20;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,6 +436,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3B3D15832541EF5D006C1DEB /* Footballers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3B3D15842541EF5D006C1DEB /* Footballers.xcdatamodel */,
+			);
+			currentVersion = 3B3D15842541EF5D006C1DEB /* Footballers.xcdatamodel */;
+			path = Footballers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3B07A9B72533687D00129A7B /* Project object */;
 }

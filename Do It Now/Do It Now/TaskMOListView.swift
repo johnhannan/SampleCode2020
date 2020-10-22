@@ -1,15 +1,15 @@
 //
-//  TaskListView.swift
+//  TaskMOListView.swift
 //  Do It Now
 //
-//  Created by jjh9 on 10/11/20.
+//  Created by jjh9 on 10/21/20.
 //
 
 import SwiftUI
 
-struct TaskListView: View {
-    @EnvironmentObject var tasks : Tasks
-
+struct TaskMOListView: View {
+    //@EnvironmentObject var tasks : Tasks
+    @Environment(\.managedObjectContext) private var viewContext
     
     @State private var addTextItem : String = ""
     @State private var isAdding = false
@@ -17,18 +17,27 @@ struct TaskListView: View {
     @State private var selectedItems = IndexSet()
     @State private var isEditing = false
     
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \ToDoItem.timestamp, ascending: true)],
+                      animation: .default)
+        private var todoItems: FetchedResults<ToDoItem>
+    
+    
     var body: some View {
         NavigationView {
             
             
             List {
-                ForEach(tasks.items.indices, id:\.self) {index in
-                    RowItem(item: tasks.items[index], index: index, editing: isEditing, selectedItems: $selectedItems)                }
+                ForEach(todoItems.indices, id:\.self) {index in
+                    RowItem(item: todoItems[index].title!, index: index, editing: isEditing, selectedItems: $selectedItems)                }
                 
                 if isAdding {
                     TextField("Add", text: $addTextItem, onEditingChanged: { _ in })
                     {
-                        tasks.addItem(item: addTextItem)
+                        let newItem = ToDoItem(context: viewContext)
+                        newItem.title = addTextItem
+                        newItem.timestamp = Date()
+                        try? viewContext.save()
+                        
                         addTextItem = ""
                         isAdding = false
                     }
@@ -40,10 +49,11 @@ struct TaskListView: View {
                                 trailing: editButton.disabled(isAdding))
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    Button(action: {tasks.deleteItems(indexSet: selectedItems)
+                    Button(action: {
+                        selectedItems.map {todoItems[$0]}.forEach(viewContext.delete)
                         isEditing = false
                         selectedItems.removeAll()
-                        
+
                     }) {Image(systemName: "trash")}
                     .disabled(selectedItems.isEmpty)
                 }
@@ -66,53 +76,10 @@ struct TaskListView: View {
             { Text(isEditing ? "Done" : "Edit") }
     }
     
-    
 }
 
-struct RowItem : View {
-    var item : String
-    var index : Int
-    var editing : Bool
-    @Binding var selectedItems : IndexSet
-    
-    var body : some View {
-        HStack {
-            if editing {
-                SelectButton(index: index, selectedItems: $selectedItems)
-            }
-            Text(item)
-        }
-        .listRowBackground(selectedItems.contains(index) ? Color.lightergray : Color.clear)
-    }
-}
-
-struct SelectButton : View {
-    var index : Int
-    @Binding var selectedItems : IndexSet
-    var body : some View {
-        Button(action: {toggle(index, in: $selectedItems)},
-               label: {imageFor(index, in: selectedItems) })
-    }
-    
-    func toggle(_ index: Int, in selectedItems : Binding<IndexSet>) {
-        if selectedItems.wrappedValue.contains(index) {
-            selectedItems.wrappedValue.remove(index)
-        } else {
-            selectedItems.wrappedValue.insert(index)
-        }
-    }
-    
-    func imageFor(_ index:Int, in selectedItems:IndexSet) -> some View {
-        let isSelected = selectedItems.contains(index)
-        return  Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
-            .renderingMode(.template)
-            .foregroundColor(isSelected ? .blue : .gray)
-    }
-
-}
-
-struct TaskListView_Previews: PreviewProvider {
+struct TaskMOListView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskListView()
+        TaskMOListView()
     }
 }

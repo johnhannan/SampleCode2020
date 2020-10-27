@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TopAppListView: View {
-    @ObservedObject var appModel = AppModel()
+    @StateObject var appModel = AppModel()
     
     
     var body: some View {
@@ -38,7 +38,10 @@ struct AppRow : View {
     var index: Int
     var body : some View {
         HStack {
-            //TODO: Image goes here
+            if let data = appInfo.imageData,
+               let image = UIImage(data:data) {
+                Image(uiImage: image)
+            }
             
             VStack {
                 Text(appInfo.title)

@@ -14,12 +14,52 @@ class AppModel : ObservableObject {
     @Published var topApps = [AppInfo]()
     let urlString = "https://itunes.apple.com/us/rss/toppaidapplications/limit=100/json"
     
-   
-
+    
+    
     init() {
-        //TODO: retrieve data & populate topApps array
-        retrieveData()
+        //retrieveData()
+        retrieveDataWithBlocks()
     }
+    
+    func retrieveDataWithBlocks() {
+        let url = URL(string: urlString)
+        let queue = OperationQueue()
+        
+        
+        let block = BlockOperation {
+            let data = try? Data(contentsOf: url!)
+            
+            if let data = data {
+                DispatchQueue.main.sync {
+                    self.topApps = self.appsFrom(data: data)
+                }
+            } else {
+                // handle error
+            }
+        }
+        
+        
+        queue.addOperation(block)
+        
+        let imageQueue = DispatchQueue(label: "TopApps ImageQueue", attributes: .concurrent)
+        
+        let imageOperation = BlockOperation {
+            for i in self.topApps.indices {
+                imageQueue.async {
+                    let url = URL(string: self.topApps[i].imageURL)
+                    let data = try? Data(contentsOf: url!)
+                    DispatchQueue.main.sync {
+                        self.topApps[i].addImage(data: data)
+                    }
+                }
+            }
+        }
+        
+        imageOperation.addDependency(block)
+        queue.addOperation(imageOperation)
+        
+    }
+    
     
     func retrieveData() {
         let url = URL(string: urlString)!
@@ -37,7 +77,6 @@ class AppModel : ObservableObject {
                 }
                 self.retrieveImageData()
             }
-            
         }
         task.resume()
         
@@ -64,15 +103,13 @@ class AppModel : ObservableObject {
             let task = urlSession.downloadTask(with: url!) { (imageURL, response, error) in
                 guard error == nil else {print("Error"); return}
                 
-                if let imageURL = imageURL {
-                    if let data = try? Data(contentsOf: imageURL) {
-                        DispatchQueue.main.async {
-                            self.topApps[i].addImage(data: data)
-                        }
+                if let imageURL = imageURL,
+                   let data = try? Data(contentsOf: imageURL) {
+                    DispatchQueue.main.async {
+                        self.topApps[i].addImage(data: data)
                         
                     }
                 }
-                
             }
             task.resume()
         }

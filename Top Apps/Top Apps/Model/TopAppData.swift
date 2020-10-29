@@ -68,7 +68,7 @@ struct AppInfo : Identifiable {
         imageData = nil
     }
     
-    mutating func addImage(data:Data) {
+    mutating func addImage(data:Data?) {
         imageData = data
     }
 

@@ -18,7 +18,62 @@ class AppModel : ObservableObject {
     
     init() {
         //retrieveData()
-        retrieveDataWithBlocks()
+        //retrieveDataWithBlocks()
+        retrieveDataWithCombine()
+    }
+    enum URLError : Error {
+        case unknown
+    }
+    
+    var allCancellable : Cancellable?
+    
+    func retrieveDataWithCombine() {
+        let url = URL(string: urlString)!
+        let urlSession = URLSession.shared
+        
+        allCancellable = urlSession.dataTaskPublisher(for: url)
+            .tryMap { data, response -> Data in
+                guard let httpResponse = response as? HTTPURLResponse,
+                      200..<300 ~= httpResponse.statusCode else {
+                    throw URLError.unknown
+                }
+                return data
+            }
+            
+            .decode(type: TopAppData.self, decoder: JSONDecoder())
+            .map {$0.feed.entry}
+            .replaceError(with: [])
+            
+            .sink{ (entries) in
+                let apps = entries.map {AppInfo(entry:$0)}
+                DispatchQueue.main.sync {
+                    self.topApps = apps
+                }
+                self.topApps.indices.forEach {self.retrieveImageData(at: $0)}
+            }
+        
+    }
+    
+    var cancellables = Set<AnyCancellable>()
+    
+    func retrieveImageData(at index:Int) {
+        let url = URL(string: topApps[index].imageURL)!
+        let session = URLSession.shared
+        
+        // Use Combine
+        session.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .replaceError(with: Data())
+            .eraseToAnyPublisher()
+            .receive(on: RunLoop.main)
+            
+            .sink { (data) in
+                DispatchQueue.main.async{
+                    self.topApps[index].addImage(data: data)
+                }
+            }
+            .store(in: &cancellables) // we retain the subscriber
+
     }
     
     func retrieveDataWithBlocks() {

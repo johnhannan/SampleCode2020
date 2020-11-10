@@ -39,10 +39,13 @@ struct HitTest: View {
         }
         .font(.largeTitle)
         .contentShape(Rectangle())
+        //.gesture(tapGesture, including: GestureMask.gesture)
         .onTapGesture {
             print("Tapped")
         }
     }
+    let tapGesture = TapGesture()
+            .onEnded { print("Ending Tap")  }
 }
 
 struct HitTest_Previews: PreviewProvider {

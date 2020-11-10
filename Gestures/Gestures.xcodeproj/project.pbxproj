@@ -12,6 +12,9 @@
 		3BF7780625597BEC002D6199 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7780525597BEC002D6199 /* Preview Assets.xcassets */; };
 		3BF7780F25597C07002D6199 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7780E25597C07002D6199 /* GestureView.swift */; };
 		3BF77855255A197C002D6199 /* HitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF77854255A197C002D6199 /* HitTest.swift */; };
+		3BF7785C255AF182002D6199 /* Rectangles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7785B255AF182002D6199 /* Rectangles.swift */; };
+		3BF7785F255AF1A3002D6199 /* RectangleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7785E255AF1A3002D6199 /* RectangleModel.swift */; };
+		3BF77862255AFC53002D6199 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF77861255AFC53002D6199 /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3BF7780725597BEC002D6199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BF7780E25597C07002D6199 /* GestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
 		3BF77854255A197C002D6199 /* HitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitTest.swift; sourceTree = "<group>"; };
+		3BF7785B255AF182002D6199 /* Rectangles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangles.swift; sourceTree = "<group>"; };
+		3BF7785E255AF1A3002D6199 /* RectangleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleModel.swift; sourceTree = "<group>"; };
+		3BF77861255AFC53002D6199 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				3BF777FE25597BEA002D6199 /* GesturesApp.swift */,
 				3BF7780E25597C07002D6199 /* GestureView.swift */,
+				3BF7785B255AF182002D6199 /* Rectangles.swift */,
+				3BF7785E255AF1A3002D6199 /* RectangleModel.swift */,
+				3BF77861255AFC53002D6199 /* Position.swift */,
 				3BF77854255A197C002D6199 /* HitTest.swift */,
 				3BF7780225597BEC002D6199 /* Assets.xcassets */,
 				3BF7780725597BEC002D6199 /* Info.plist */,
@@ -143,7 +152,10 @@
 			files = (
 				3BF777FF25597BEA002D6199 /* GesturesApp.swift in Sources */,
 				3BF7780F25597C07002D6199 /* GestureView.swift in Sources */,
+				3BF77862255AFC53002D6199 /* Position.swift in Sources */,
 				3BF77855255A197C002D6199 /* HitTest.swift in Sources */,
+				3BF7785F255AF1A3002D6199 /* RectangleModel.swift in Sources */,
+				3BF7785C255AF182002D6199 /* Rectangles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

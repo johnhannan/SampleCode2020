@@ -13,7 +13,7 @@ struct GestureView: View {
     @State private var doubleCount = 0
     @State private var rotationAngle : Angle = Angle.zero
     @State private var scaleFactor : CGFloat = 1.0
-    @State private var location : CGPoint = CGPoint.zero
+    @State private var offset : CGSize = CGSize.zero
     
     var body: some View {
         let tapGesture = TapGesture()
@@ -41,10 +41,10 @@ struct GestureView: View {
         //let rotateAndMagGesture = SimultaneousGesture(
         let dragGesture = DragGesture()
             .onChanged { (value) in
-                self.location = value.location
+                self.offset = value.translation
             }
             .onEnded { (value) in
-                withAnimation {self.location = CGPoint.zero}
+                withAnimation {self.offset = CGSize.zero}
             }
         
         return VStack(spacing:30) {
@@ -76,7 +76,7 @@ struct GestureView: View {
                 .foregroundColor(.orange)
                 .frame(width: 100, height: 100)
                 //.position(location)
-                .offset(CGSize(width: location.x, height: location.y))
+                .offset(offset)
                 .gesture(dragGesture)
             
             Text("Bottom Text")

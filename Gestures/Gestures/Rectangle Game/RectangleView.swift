@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RectangleView: View {
     @EnvironmentObject var rectangleModel : RectangleModel
-    
+    @State private var offset = CGSize.zero
     var body: some View {
         
         let tapGesture = LongPressGesture(minimumDuration: 0.1)
@@ -28,8 +28,10 @@ struct RectangleView: View {
         
         
         Rectangle()
-            .foregroundColor(color.red)  // worry about individual colors later
-
+            .foregroundColor(Color.red)  // worry about individual colors later
+            //.frame(width: <#T##CGFloat?#>, height: <#T##CGFloat?#>)  // depends on model object
+            //.position(<#T##position: CGPoint##CGPoint#>)   // depends on model object
+            .offset(offset)  // result of dragging
             .gesture(tapDrag)
     }
 }

@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct OutlineRectangleView: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Rectangle()
+            // TODO: border with a dashed line
+            //.frame(width: <#T##CGFloat?#>, height: <#T##CGFloat?#>)
+            //.position(<#T##position: CGPoint##CGPoint#>)
+            
     }
 }
 

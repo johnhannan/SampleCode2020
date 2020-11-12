@@ -24,7 +24,7 @@ struct HitTest: View {
                 Circle()
                     .fill(Color.orange)
                     .frame(width: 175, height: 175)
-                    .allowsHitTesting(false)
+                    .allowsHitTesting(true)
                     .onTapGesture {
                         print("Circle tapped!")
                     }
@@ -38,7 +38,7 @@ struct HitTest: View {
             Spacer()
         }
         .font(.largeTitle)
-        .contentShape(Rectangle())
+        //.contentShape(Rectangle())
         //.gesture(tapGesture, including: GestureMask.gesture)
         .onTapGesture {
             print("Tapped")

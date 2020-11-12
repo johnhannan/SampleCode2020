@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct Flippable<Content>: View where Content: View {
+    
+    enum DraggingState {
+        case right, left
+    }
+    
     @State private var degrees  : Double = 0.0  // rotation angle
-    @State private var flipping  = true //is gesture for flipping from front to back?
+    @State private var swiping  = DraggingState.left //swipe direction
     var isShowingBack : Bool {degrees < -90}
     
     var frontContent : () -> Content
@@ -22,17 +27,36 @@ struct Flippable<Content>: View where Content: View {
         
         let swipe = DragGesture()
             .onChanged { (value) in
+                let translation = Double(value.translation.width)
+                switch swiping {
+                case .left:
+                    degrees = rotationDegreesFor(translation)
+                case .right:
+                    degrees = rotationDegreesFor(-180 + translation)
+                }
+               
             }
             .onEnded { (value) in
+                if isShowingBack {
+                    withAnimation {degrees = -180.0}
+                    swiping = .right
+                }
+                else {
+                    withAnimation {degrees = 0.0}
+                    swiping = .left
+                }
             }
         
         Group {
             if isShowingBack {
                 backContent()
+                    .rotation3DEffect(Angle(degrees:180), axis: (0,1,0))
             } else {
                 frontContent()
             }
+            
         }
+        .rotation3DEffect(Angle(degrees:degrees), axis: (0,1,0))
         .gesture(swipe)
     }
     

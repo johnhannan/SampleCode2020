@@ -8,13 +8,13 @@
 import Foundation
 import CoreGraphics  // Not a good idea, but convenient for this exaple
 
-struct Rect : Identifiable{
+struct Rect : Identifiable {
     var rect : CGRect
     var id = UUID()
     
+    // Convenience properties
     var width : CGFloat {rect.size.width}
     var height : CGFloat {rect.size.height}
-    
     var center : CGPoint {
         get {return CGPoint(x: rect.midX, y: rect.midY)}
         set(newValue) {
@@ -23,6 +23,10 @@ struct Rect : Identifiable{
         }
     }
     
+    // use for previews
+    static var anyRect = Rect(rect: CGRect(x: 100, y: 100, width: 100, height: 100))
+    
+    // check if other rectangle is within this rectangle
     func contains(_ other:Rect) -> Bool {
         self.rect.contains(other.rect)
     }
@@ -37,7 +41,7 @@ struct Rect : Identifiable{
 class RectangleModel : ObservableObject{
     
     @Published var rectangles = [Rect]()
-    @Published var creatingRect : Rect?
+    @Published var inProgressRect : Rect?
     
     
     func newRect(at point: CGPoint) {
@@ -52,6 +56,7 @@ class RectangleModel : ObservableObject{
         
     }
     
+    // a rectangle was moved.  do we need to do anything with it?
     func checkMovedRect(_ rect:Rect) {
         
     }

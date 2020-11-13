@@ -100,11 +100,12 @@ struct GestureView: View {
                 //.gesture(magnifyGesture)
                 //.gesture(magAndRotateGesture)
             
-            Draggable {
+            
             RoundedRectangle(cornerRadius: 10)
                 .foregroundColor(.orange)
                 .frame(width: 100, height: 100)
-            }
+                .draggable()
+            
                 //.position(location)
                 //.offset(offset)
                 //.gesture(dragGesture)

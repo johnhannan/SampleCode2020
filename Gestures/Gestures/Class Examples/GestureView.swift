@@ -93,6 +93,7 @@ struct GestureView: View {
             Image("Penn Seal")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .position(CGPoint.zero)
                 .scaleEffect(scaleFactor)
                 .rotationEffect(rotation)
                

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RectangleView: View {
     @EnvironmentObject var rectangleModel : RectangleModel
+    var rectangle : Rect 
     @State private var offset = CGSize.zero
     var body: some View {
         
@@ -28,16 +29,20 @@ struct RectangleView: View {
         
         
         Rectangle()
-            .foregroundColor(Color.red)  // worry about individual colors later
-            //.frame(width: <#T##CGFloat?#>, height: <#T##CGFloat?#>)  // depends on model object
-            //.position(<#T##position: CGPoint##CGPoint#>)   // depends on model object
+            .foregroundColor(colorForRectangle(rectangle))  
+            .frame(width: rectangle.width, height: rectangle.height)  // depends on model object
+            .position(rectangle.center)   // depends on model object
             .offset(offset)  // result of dragging
             .gesture(tapDrag)
     }
 }
 
+func colorForRectangle(_ rectangle:Rect) -> Color {
+    return Color(red: rectangle.colorRGB.0, green: rectangle.colorRGB.1, blue: rectangle.colorRGB.2, opacity: 1.0)
+}
+
 struct RectangleView_Previews: PreviewProvider {
     static var previews: some View {
-        RectangleView()
+        RectangleView(rectangle: Rect.anyRect)
     }
 }

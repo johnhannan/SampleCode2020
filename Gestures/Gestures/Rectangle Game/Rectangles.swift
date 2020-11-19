@@ -31,17 +31,35 @@ struct Rectangles: View {
             .onEnded { _ in
                 rectangleModel.addRect()
             }
-
+        
         ZStack {
-            Color.gray
-                .gesture(dragGesture)
+            VStack {
+                Color.gray
+                    .gesture(dragGesture)
+                
+                HStack {
+                    
+                    Picker(selection: $rectangleModel.gameShape, label: Text("Shape")) {
+                        ForEach(GameShapeNames.allCases) {
+                            Text($0.rawValue.capitalized).tag($0)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                    Spacer()
+                    Button(action: {rectangleModel.removeAll()})
+                        {Image(systemName:"trash.fill")}
+                    
+                }.padding([.leading,.trailing])
+                
+            }
+            
+            
             
             ForEach(rectangleModel.rectangles) {rectangle in
-                RectangleView(rectangle: rectangle)
+                RectangleView(piece: rectangle)
             }
             
             if let rectangle = rectangleModel.inProgressRect {
-                OutlineRectangleView(rectangle: rectangle)
+                OutlineRectangleView(piece: rectangle)
             }
             
         }

@@ -9,19 +9,28 @@ import SwiftUI
 
 struct OutlineRectangleView: View {
     @EnvironmentObject var rectangleModel : RectangleModel
-    var rectangle : GameShape
+    var piece : GameShape
     var body: some View {
-        Rectangle()
-            .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [5]))
-            // TODO: border with a dashed line
-            .frame(width: rectangle.width, height: rectangle.height)
-            .position(rectangle.center)
-            
+        
+        Group {
+            switch piece.gameShape {
+            case .rectangle:
+                Rectangle()
+                    .strokeBorder(style: StrokeStyle(lineWidth: 2,dash: [5]) )
+            case .circle:
+                Circle()
+                    .strokeBorder(style: StrokeStyle(lineWidth: 2,dash: [5]) )
+            }
+        }
+        .frame(width: piece.width, height: piece.height)
+        .position(piece.center)
     }
+    
 }
+
 
 struct OutlineRectangleView_Previews: PreviewProvider {
     static var previews: some View {
-        OutlineRectangleView(rectangle: GameShape.anyRect)
+        OutlineRectangleView(piece: GameShape.anyRect)
     }
 }

@@ -13,6 +13,7 @@
 		3BC03D60255D7FC7009A6F6B /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03D5F255D7FC7009A6F6B /* RectangleView.swift */; };
 		3BC03D63255D7FE0009A6F6B /* OutlineRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03D62255D7FE0009A6F6B /* OutlineRectangleView.swift */; };
 		3BC03D6C255DABF1009A6F6B /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03D6B255DABF1009A6F6B /* Draggable.swift */; };
+		3BF63D7D2565660800118123 /* CG+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF63D7C2565660800118123 /* CG+Convenience.swift */; };
 		3BF777FF25597BEA002D6199 /* GesturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF777FE25597BEA002D6199 /* GesturesApp.swift */; };
 		3BF7780325597BEC002D6199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7780225597BEC002D6199 /* Assets.xcassets */; };
 		3BF7780625597BEC002D6199 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF7780525597BEC002D6199 /* Preview Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		3BC03D5F255D7FC7009A6F6B /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 		3BC03D62255D7FE0009A6F6B /* OutlineRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineRectangleView.swift; sourceTree = "<group>"; };
 		3BC03D6B255DABF1009A6F6B /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
+		3BF63D7C2565660800118123 /* CG+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CG+Convenience.swift"; sourceTree = "<group>"; };
 		3BF777FB25597BEA002D6199 /* Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF777FE25597BEA002D6199 /* GesturesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesApp.swift; sourceTree = "<group>"; };
 		3BF7780225597BEC002D6199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		3BC03D5B255D7F5D009A6F6B /* Rectangle Game */ = {
 			isa = PBXGroup;
 			children = (
+				3BF63D7C2565660800118123 /* CG+Convenience.swift */,
 				3BF7785E255AF1A3002D6199 /* RectangleModel.swift */,
 				3BC03D5C255D7F94009A6F6B /* Rectangles.swift */,
 				3BC03D5F255D7FC7009A6F6B /* RectangleView.swift */,
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF777FF25597BEA002D6199 /* GesturesApp.swift in Sources */,
+				3BF63D7D2565660800118123 /* CG+Convenience.swift in Sources */,
 				3BC03D5D255D7F94009A6F6B /* Rectangles.swift in Sources */,
 				3BC03D37255C7720009A6F6B /* Flippable.swift in Sources */,
 				3BC03D60255D7FC7009A6F6B /* RectangleView.swift in Sources */,

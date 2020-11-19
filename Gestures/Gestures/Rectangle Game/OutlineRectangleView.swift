@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OutlineRectangleView: View {
     @EnvironmentObject var rectangleModel : RectangleModel
-    var rectangle : Rect
+    var rectangle : GameShape
     var body: some View {
         Rectangle()
             .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [5]))
@@ -22,6 +22,6 @@ struct OutlineRectangleView: View {
 
 struct OutlineRectangleView_Previews: PreviewProvider {
     static var previews: some View {
-        OutlineRectangleView(rectangle: Rect.anyRect)
+        OutlineRectangleView(rectangle: GameShape.anyRect)
     }
 }

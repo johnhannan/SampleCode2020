@@ -32,8 +32,10 @@ struct PlayerMOView: View {
 
 }
 
-//struct PlayerMOVieiw_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlayerMOVieiw()
-//    }
-//}
+struct PlayerMOView_Previews: PreviewProvider {
+    static let viewContext = PersistenceController.preview.container.viewContext
+    static var previews: some View {
+        PlayerMOView(player: PlayerMO.standard)
+            .environment(\.managedObjectContext, viewContext)
+    }
+}

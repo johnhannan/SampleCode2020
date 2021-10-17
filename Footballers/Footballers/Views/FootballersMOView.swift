@@ -53,8 +53,12 @@ struct PlayerMORowView : View {
     }
 }
 
-//struct FootballersMOView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FootballersMOView()
-//    }
-//}
+struct FootballersMOView_Previews: PreviewProvider {
+    static let viewContext = PersistenceController.shared.container.viewContext
+    @FetchRequest(sortDescriptors: [], predicate: nil, animation: nil) static var players : FetchedResults<PlayerMO>
+    static var previews: some View {
+        FootballersMOView(players: players)
+            .environment(\.managedObjectContext, viewContext)
+
+    }
+}
